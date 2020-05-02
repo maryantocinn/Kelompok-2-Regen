@@ -34,7 +34,6 @@
                 <span class="progress_bar step5"></span>
             </div>
             <div class="form_cari_penerbangan">
-                
                 <div class="form1">
                     <form id="#">
                         <label class="label" for="fdari">Dari</label><br>
@@ -56,20 +55,21 @@
                     </form>
                 </div>
                 <div class="form3">
-                    <form action="#">
-                        <select id="flight_class" name="class">
+                    <form class="flight" action="#">
+                        <label class="label_flight" for="flight_class">Kelas Penerbangan</label><br>
+                        <select class="select_flight" id="flight_class" name="class">
                             <option value="ecconomy">ecconomy class</option>
                             <option value="first">first class</option>
                             <option value="business">business class</option>
                         </select>
                     </form>
-                    <form action="#">
-                        <input id="adult" class="pass_number"type="number" min="0" step="1" value="0">
-                        <input id="kids" class="pass_number" type="number" min="0" step="1" value="0">
-                        <input id="baby" class="pass_number" type="number" min="0" step="1" value="0">
+                    <form class="passenger" action="#">
+                        <input class="passenger_form" id="adult" class="pass_number"type="number" min="0" step="1" value="0">
+                        <input class="passenger_form" id="kids" class="pass_number" type="number" min="0" step="1" value="0">
+                        <input class="passenger_form" id="baby" class="pass_number" type="number" min="0" step="1" value="0">
                     </form>
                 </div>
-                <input type="submit" value="Submit">
+                <input class="submit_button" type="submit" value="Cari Penerbangan">
             </div>
         </div>
     </div>

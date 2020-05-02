@@ -18,6 +18,7 @@
 .company_name{
     margin-left: 5px;
     height:2.5rem;
+    margin-bottom: .5rem;
 }
 .navbar_menu{
     list-style: none;
@@ -28,6 +29,7 @@
     text-transform: capitalize;
     font-size:20px;
     font-weight: 600;
+    align-self: center;
 }
 .navbar_items:hover{
     cursor: pointer;
@@ -38,18 +40,20 @@
     color: darkblue;
 }
 .navbar_items>button{
-    padding: 3px 5px;
+    padding: .5rem .5rem;
     border-style: none;
-    border-radius: 3px;
-    background-color: aquamarine;
+    border-radius: 15px;
+    background-color: rgb(114, 194, 175);
     text-transform: capitalize;
     font-size:16px;
     font-weight: 600;
+    color: white;
 }
 /* Content */
 .content{
-    height: 50rem;
+    height: 28rem;
 }
+/* bagian atas */
 .registration{
     height:inherit;
 }
@@ -72,16 +76,16 @@
 .arrow_right{
     order: 3;
 } 
+/* FORMNYA */
 .form_cari_penerbangan{
-    z-index: 1;
-    height: 20rem;
+    height: 16rem;
     width: 36rem;
     margin-left: -18rem;
     position: absolute;
-    top: 21rem;
+    top: 19rem;
     left: 50%;
     border: 1px solid;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: aliceblue;
 }
 .registration_step{
@@ -89,7 +93,7 @@
     width: 100%;
     display: inline-flex;
     position: absolute;
-    top: 19rem;
+    top: 17.5rem;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -112,8 +116,18 @@
 }
 .label{
     padding-left: 15px;
-    font-weight: 550;
+    font-weight: 500;
     color: slategrey;
+}
+.label_flight{
+    font-weight: 500;
+    color: slategrey;
+    padding-left: 1rem;
+}
+.select_flight{
+    height: 2rem;
+    width: 10rem;
+    border-radius: 10px;
 }
 .input{
     border: solid slategray 1px;
@@ -135,4 +149,44 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.form3{
+    margin-top: .5rem;
+    width: 28rem;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 4rem;
+}
+.pass_number{
+    width: 5rem;
+    margin: 0 2px;
+}
+.passenger_form{
+    width: 3rem;
+}
+.submit_button{
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 24rem;
+    background-color: rgb(114, 194, 175);
+    border-radius: 10px;
+    border: 1px solid slategray;
+    justify-content: right;
+    font-weight: 560;
+    color: white;
+}
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
 }
