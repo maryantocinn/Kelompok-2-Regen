@@ -269,11 +269,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .lgn_button:hover{
     cursor:pointer;
-    background-color: rgb(140, 210, 190);
+    background-color: rgb(109, 247, 205);
 }
 .newto_line{
     width: 100%;
-    margin-top: .3rem;
+    margin-top: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,4 +281,28 @@ input[type=number]::-webkit-outer-spin-button {
 .newto{
     text-decoration: none;
     color: rgb(114, 194, 175);
+}
+.createnew_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: .5rem;
+}
+.createnew_button>a{
+    width: 100%;
+    cursor: pointer;
+}
+.createnew{
+    height: 2.2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(114, 194, 175);
+    font-size: large;
+    color: white;
+}
+.createnew:hover{
+    background-color: rgb(109, 247, 205);
 }
