@@ -192,8 +192,38 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /* register page */
 .regis_body{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.logo_regis{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_form{
+    height: 5rem;
+}
+.nama{
+    height: 3rem;
+}
+.regis_container{
+    height: 25rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px slategrey;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.judul{
+    font-size: x-large;
+    text-transform: capitalize;
+}
+.regis_name{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
 }
