@@ -118,10 +118,11 @@ a{
     align-items: center;
     justify-content: center;
 }
-.label{
+.label_index{
     padding-left: 15px;
     font-weight: 500;
     color: slategrey;
+    width: 14rem;
 }
 .label_flight{
     font-weight: 500;
@@ -133,7 +134,7 @@ a{
     width: 10rem;
     border-radius: 10px;
 }
-.input{
+.input_index{
     border: solid slategray 1px;
     height: 1.4rem;
     width: 14rem;
