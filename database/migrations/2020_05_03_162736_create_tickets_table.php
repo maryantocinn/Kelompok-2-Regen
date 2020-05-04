@@ -15,6 +15,12 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->string('airline');
+            $table->string('fromCity');
+            $table->string('destinationCity');
+            $table->string('boardingTime');
+            $table->string('landingTime');
+            $table->string('class');
             $table->timestamps();
         });
     }
