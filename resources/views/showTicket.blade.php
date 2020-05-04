@@ -26,6 +26,11 @@
                     <td>{{$ticket->class}}</td>
                     <td>
                         <a href="{{url('/edit/ticket/'.$ticket->id)}}">Edit</a>
+                        <form action="{{url('delete/ticket/'.$ticket->id)}}" method="post">
+                            @csrf
+                            {{method_field('DELETE')}}
+                            <button type="submit">Delete</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach
