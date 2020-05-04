@@ -24,6 +24,9 @@
                     <td>{{$ticket->boardingTime}}</td>
                     <td>{{$ticket->landingTime}}</td>
                     <td>{{$ticket->class}}</td>
+                    <td>
+                        <a href="{{url('/edit/ticket/'.$ticket->id)}}">Edit</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
