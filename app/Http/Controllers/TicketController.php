@@ -95,7 +95,7 @@ class TicketController extends Controller
     {
         $search = $request->search;
 
-        $ticket = Ticket::where('class','=',$search)->paginate(10);
-        return view('searchTicket',compact('ticket'));
+        $data = Ticket::where('class','=',$search)->paginate(10);
+        return view('showTicket',compact('data'));
     }
 }

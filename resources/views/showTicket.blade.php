@@ -13,6 +13,14 @@
 			margin:5px;
 		}
 	</style>
+
+    <a href="/ticket">Home</a>
+        
+    <form action="{{url('/search/ticket')}}" method="get">
+        <input type="number" name="search" placeholder="Search Class">
+        <button type="submit">Search</button>
+    </form>
+
     <table>
         <thead>
             <th>airline</th>
