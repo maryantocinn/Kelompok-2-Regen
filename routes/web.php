@@ -26,3 +26,4 @@ Route::get('/ticket','TicketController@index');
 Route::get('/edit/ticket/{ticket}','TicketController@edit');
 Route::put('/update/ticket/{ticket}','TicketController@update');
 Route::delete('/delete/ticket/{ticket}','TicketController@destroy');
+Route::get('/search/ticket','TicketController@search');

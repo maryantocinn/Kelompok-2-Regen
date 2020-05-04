@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TicketController extends Controller
 {
@@ -14,7 +15,8 @@ class TicketController extends Controller
      */
     public function index()
     {
-        $data = Ticket::all();
+        // $data = Ticket::all();
+        $data = Ticket::paginate(10);
         return view('showTicket',compact('data'));
     }
 
@@ -87,5 +89,13 @@ class TicketController extends Controller
     {
         $ticket->delete();
         return redirect('/ticket');
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+
+        $ticket = Ticket::where('class','=',$search)->paginate(10);
+        return view('searchTicket',compact('ticket'));
     }
 }

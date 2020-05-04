@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <style type="text/css">
+		.pagination li{
+			float: left;
+			list-style-type: none;
+			margin:5px;
+		}
+	</style>
     <table>
         <thead>
             <th>airline</th>
@@ -36,5 +43,13 @@
             @endforeach
         </tbody>
     </table>
+
+    <br>
+    Halaman : {{ $data->currentPage() }} <br/>
+	Jumlah Data : {{ $data->total() }} <br/>
+	Data Per Halaman : {{ $data->perPage() }} <br/>
+ 
+ 
+	{{ $data->links() }}
 </body>
 </html>
