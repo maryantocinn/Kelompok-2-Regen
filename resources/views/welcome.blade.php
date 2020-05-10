@@ -1,100 +1,82 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Green</title>
+    <link rel="icon" href="{{asset('img/1132272.png')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar_Logo">
+            <img class="logo" src="{{asset('img/1132272.png')}}">
+            <img class="company_name" src="{{asset('img/nama.png')}}">
+        </span>
+        <ul class="navbar_menu">
+            <li class="navbar_items">cart</li>
+            <li class="navbar_items"><a href="/login">login</a></li>
+            <li class="navbar_items"><a href="/register"><button>Register</button></a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="registration">
+            <div class="segmen_arrow">
+                <img class="arrow arrow_left" src="{{asset('img/Arrow-Left-icon.png')}}">
+                <img class="arrow arrow_right" src="{{('img/Arrow-Right-icon.png')}}">
+                
+            </div>
+            <div class="registration_step">
+                <span class="progress_bar step1"></span>
+                <span class="progress_bar step2"></span>
+                <span class="progress_bar step3"></span>
+                <span class="progress_bar step4"></span>
+                <span class="progress_bar step5"></span>
+            </div>
+            <div class="form_cari_penerbangan">
+                <div class="form1">
+                    <form id="#">
+                        <label class="label_index" for="fdari">Dari</label><br>
+                        <input class="input_index left" type="text" id="fdari" name="fdari">
+                    </form>
+                    <form id="#">
+                        <label class="label_index" for="fdari">Ke</label><br>
+                        <input class="input_index right" type="text" id="fke" name="fke">
+                    </form>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Testing
+                <div class="form2">
+                    <form action="#">
+                        <label class="label_index" for="fberangkat">Berangkat</label><br>
+                        <input class="input_index left"type="text" id="fname" name="fname">
+                    </form>
+                    <form action="#">
+                        <label class="label_index" for="fpulang">Pulang</label><br>
+                        <input class="input_index right" type="text" id="fpulang" name="fpulang"><br>
+                    </form>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="form3">
+                    <form class="flight" action="#">
+                        <label class="label_flight" for="flight_class">Kelas Penerbangan</label><br>
+                        <select class="select_flight" id="flight_class" name="class">
+                            <option value="ecconomy">ecconomy class</option>
+                            <option value="first">first class</option>
+                            <option value="business">business class</option>
+                        </select>
+                    </form>
+                    <form class="passenger" action="#">
+                        <input class="passenger_form" id="adult" class="pass_number"type="number" min="0" step="1" value="0">
+                        <input class="passenger_form" id="kids" class="pass_number" type="number" min="0" step="1" value="0">
+                        <input class="passenger_form" id="baby" class="pass_number" type="number" min="0" step="1" value="0">
+                    </form>
                 </div>
+                <input class="submit_button" type="submit" value="Cari Penerbangan">
             </div>
         </div>
-    </body>
+    </div>
+
+    <footer>
+        <p class="copyright">© 2009-2020 PT Global Tiket Network All Rights Reserved</p>
+    </footer>
+
+</body>
 </html>

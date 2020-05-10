@@ -1,77 +1,69 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Green</title>
+    <link rel="icon" href="{{asset('img/1132272.png')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body class="register_email_body">
+    <div class="register_email_logo">
+        <img class="logoe" src="{{asset('img/1132272.png')}}">
+        <img class="namee" src="{{asset('img/nama.png')}}">
+    </div>
+    <div >
+        <form method="POST" action="{{ route('register') }}" class="register_email_form" ">
+        @csrf
+            <div class="register_email_left">
+                <div class="register_email_title">
+                    <p>Register</p>
+                </div>
+                <div class="register_email_box">
+                    <input class="input_register form-control @error('email') is-invalid @enderror" type="text" id="email" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="register_password_box">
+                    <input class="input_register form-control @error('password') is-invalid @enderror" type="password" id="email" name="password" placeholder="Password" required autocomplete="new-password">
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="register_confirm_password_box">
+                    <input class="input_register form-control" type="password" id="password-confirm" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
+                </div>           
+            </div>
+            <div class="border"
+                style="width: 0px; height: 200px; border: 1.5px rgb(200, 211, 221) solid;">
+            </div>
+            <div class="register_email_right">
+                <div class="register_email_desc">
+                    <div class="register_image">
+                        <img class="person_register" src="{{('img/profile.gif')}}">
+                    </div>
+                    <div class="is_this_u">
+                        <p>Is this you?</p>
+                    </div>
+                </div>
+                <div class="register_email_button">
+                    <div class="register_email_choose">
+                        <a href="#"><button class="choosefile1">Choose File</button></a>
+                    </div>
+                    <div class="yes_button">
+                        <a href="confirm.html"><button class="yes">Yes!</button></a>
+                    </div>      
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-</div>
-@endsection
+    
+</body>
+</html>
