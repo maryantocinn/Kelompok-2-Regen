@@ -358,6 +358,7 @@ input[type=number]::-webkit-outer-spin-button {
 .judul{
     font-size: x-large;
     text-transform: capitalize;
+    font-family: 'Lato';
 }
 .regis_name{
     display: flex;
