@@ -747,7 +747,16 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     margin-top: 1rem;
 }
+
 /* Profile page*/
+.navbar_profile{
+padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}   
 .navbar_pass{
     padding: 0 4rem;
     height: 8rem;
@@ -1029,3 +1038,47 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 3rem;
 }
 /* change password page */
+.change_pass_content{
+    margin: 0 4rem 7rem 4rem;
+    padding: 2rem ;
+    width: 25em;
+    height: 20rem;
+    border-radius: 2rem;
+    background-color: rgb(227, 227, 227);
+
+}
+.change_pass_body{
+    height: 40rem;
+}
+.change_pass_content{
+    display: flex;
+    flex-direction: column;
+}
+.change_pass_txt{
+    font-size: large;
+    margin: 1rem 0 0 0 ;
+    color: slategray;
+    text-transform: capitalize;
+}
+.input_pass{
+    height: 2rem;
+    border-radius:1rem;
+    width: 13rem;
+    padding-left: 1rem;
+    border:solid slategray 1px;
+}
+.change_bt{
+    align-self: flex-end;
+}
+.change_confirm_bt{
+    height: 2rem;
+    margin-top:2rem;
+    font-size: small;
+    color: white;
+    border: 1px solid slategrey;
+    border-radius:1rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    background-color: rgb(114, 194, 175);
+    width: 9rem;
+}
