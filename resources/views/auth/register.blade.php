@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    
 </head>
 <body class="register_email_body">
     <div class="register_email_logo">
@@ -47,7 +48,7 @@
             <div class="register_email_right">
                 <div class="register_email_desc">
                     <div class="register_image">
-                        <img class="person_register" src="{{('img/profile.gif')}}">
+                        <img class="person_register" id="blah" src="{{('img/profile.gif')}}" >
                     </div>
                     <div class="is_this_u">
                         <p>Is this you?</p>
@@ -56,8 +57,8 @@
                 <div class="register_email_button">
                     <div class="register_email_choose">
                         
-                        <label class="choosefile1" for="file-upload">Choose File</label>
-                        <input type="file" id="file-upload" name="profile_picture" style="display:none">
+                        <label class="choosefile1" for="imgInp">Choose File</label>
+                        <input type="file" id="imgInp" name="profile_picture" style="display:none" onchange="preview(this)">
                     </div>
                     <div class="yes_button">
                         <button type="Submit" class="yes">Yes!</button>
@@ -68,4 +69,22 @@
     </div>
     
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
 </html>

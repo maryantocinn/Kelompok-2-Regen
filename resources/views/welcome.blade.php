@@ -6,6 +6,7 @@
     <title>Fly Green</title>
     <link rel="icon" href="{{asset('img/1132272.png')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <nav class="navbar">
