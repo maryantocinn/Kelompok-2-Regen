@@ -20,7 +20,9 @@
             <li class="navbar_items"><a href="#">Name</a></li>
             <li class="pic_link navbar_items ">
                 <a class="pic_link" href="profile.html">
-                    <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$user->profile_picture)}}" alt="profile picture">
+                    @if($user->profile_picture != NULL)
+                        <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$user->profile_picture)}}" alt="profile picture">
+                    @endif
                 </a>
             </li>
         </ul>
@@ -31,7 +33,11 @@
         <div class="profile_content">
             <div class="profile_form">
                 <div class="profile_col_1">
+                    @if($user->profile_picture == NULL)
+                        <img class="img_disp person_register" src="{{('img/profile.gif')}}" alt="profile picture">
+                    @else
                     <img class="img_disp person_register" id="blah" src="{{url('/profile/'.$user->profile_picture)}}" >
+                    @endif
                     <label class="profile_change_pic_bt" for="imgInp">Change Picture</label>
                     <input type="file" id="imgInp" name="profile_picture" value="{{$user->profile_picture}}" style="display:none" onchange="preview(this)">
                 </div>

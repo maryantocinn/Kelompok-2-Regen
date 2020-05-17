@@ -17,7 +17,7 @@
         <ul class="navbar_menu">
             <li class="navbar_items">cart</li>
             @auth
-                <li class="navbar_items"><a href="/home">{{$datas->email}}</a></li>
+                <li class="navbar_items"><a href="/account">{{$datas->front_name}} {{$datas->last_name}}</a></li>
                 @if($datas->profile_picture != NULL)
                 <img class="navbar_items" src="{{url('/profile/'.$datas->profile_picture)}}" width=80px>
                 @endif

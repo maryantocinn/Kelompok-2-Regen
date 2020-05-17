@@ -9,7 +9,7 @@
     </head>
     <body class="regis_body">
         <div class="logo_regis">
-            <a href="index.html"><img class="logo_form" src="{{asset('img/1132272.png')}}"></a>
+            <a href="#"><img class="logo_form" src="{{asset('img/1132272.png')}}"></a>
             <img class="nama" src="{{asset('img/nama.png')}}">
         </div>
         <div class="regis_container">
