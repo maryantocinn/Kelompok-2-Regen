@@ -16,6 +16,14 @@ a{
     align-items: center;
     justify-content: space-between;
 }
+.navbar_profile{
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .logo{
     height:4rem;
 }
@@ -737,4 +745,40 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+}
+/* Profile page*/
+.profile_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_form{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 20rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    border-radius: 25px;
+}
+.profile_col_1{
+    display: flex;
+    flex-direction: column;
+}
+.profile_col_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.profile_col_3{
+    display: flex;
+    flex-direction: column;
+}
+.email_pass{
+    margin: 2rem 0;
+    width: 50vw;
+    height: 15rem;
+    background-color: lightgray;
+    border-radius: 25px;
 }
