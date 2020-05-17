@@ -72,6 +72,6 @@ class HomeController extends Controller
             request()->file('ktp')->move('ktp',$name);
             $user->update(['ktp'=>$name]);
         }
-        return redirect('/');
+        return view('registerSuccess');
     }
 }
