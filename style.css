@@ -245,6 +245,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .login_title{
     font-size: x-large;
+    font-family: 'Lato';
 }
 .input{
     border-radius: 10px;
