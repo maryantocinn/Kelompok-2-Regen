@@ -42,4 +42,36 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function info()
+    {
+        $user = Auth::user();
+        return view('registerInfo',compact('user'));
+    }
+
+    public function submitInfo(Request $request, User $user)
+    {
+        $user->update($request->all());
+        $dob = $request->bdate.'-'.$request->bmonth.'-'.$request->byear;
+        $user->update(['dob'=>$dob]);
+        return redirect('/register/ktp');
+    }
+
+    public function ktp()
+    {
+        $user = Auth::user();
+        return view('registerKTP',compact('user'));
+    }
+
+    public function submitKTP(Request $request, User $user)
+    {
+        $user->update($request->all());
+        
+        if(request()->hasFile('ktp')){
+            $name = time()."_".request()->file('ktp')->getClientOriginalName();
+            request()->file('ktp')->move('ktp',$name);
+            $user->update(['ktp'=>$name]);
+        }
+        return redirect('/');
+    }
 }

@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('dob')->nullable();
             $table->string('address')->nullable();
+            $table->string('ktp')->nullable();
             $table->timestamps();
             
         });

@@ -24,3 +24,7 @@ Route::get('/edit/ticket/{ticket}','TicketController@edit');
 Route::put('/update/ticket/{ticket}','TicketController@update');
 Route::delete('/delete/ticket/{ticket}','TicketController@destroy');
 Route::get('/search/ticket','TicketController@search');
+Route::get('/register/info','HomeController@info');
+Route::put('/register/info/{user}','HomeController@submitInfo');
+Route::get('/register/ktp','HomeController@ktp');
+Route::put('/register/ktp/{user}','HomeController@submitKTP');
