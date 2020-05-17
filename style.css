@@ -126,6 +126,7 @@ a{
     color: slategrey;
     width: 14rem;
     margin-top: .5rem;
+    font-family: 'Lato';
 }
 .label_flight{
     font-weight: 500;
