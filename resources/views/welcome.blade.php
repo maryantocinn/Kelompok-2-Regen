@@ -15,8 +15,13 @@
         </span>
         <ul class="navbar_menu">
             <li class="navbar_items">cart</li>
-            <li class="navbar_items"><a href="/login">login</a></li>
-            <li class="navbar_items"><a href="/register"><button>Register</button></a></li>
+            @auth
+                <li class="navbar_items"><a href="/home">{{$datas->email}}</a></li>
+                <li class="navbar_items"><a href="/home">phto</a></li>
+            @else
+                <li class="navbar_items"><a href="/login">login</a></li>
+                <li class="navbar_items"><a href="/register"><button>Register</button></a></li>
+            @endauth
         </ul>
     </nav>
     <div class="content">
@@ -33,44 +38,51 @@
                 <span class="progress_bar step4"></span>
                 <span class="progress_bar step5"></span>
             </div>
-            <div class="form_cari_penerbangan">
-                <div class="form1">
-                    <form id="#">
-                        <label class="label_index" for="fdari">Dari</label><br>
-                        <input class="input_index left" type="text" id="fdari" name="fdari">
-                    </form>
-                    <form id="#">
-                        <label class="label_index" for="fdari">Ke</label><br>
-                        <input class="input_index right" type="text" id="fke" name="fke">
-                    </form>
-                </div>
-                <div class="form2">
-                    <form action="#">
-                        <label class="label_index" for="fberangkat">Berangkat</label><br>
-                        <input class="input_index left"type="text" id="fname" name="fname">
-                    </form>
-                    <form action="#">
-                        <label class="label_index" for="fpulang">Pulang</label><br>
-                        <input class="input_index right" type="text" id="fpulang" name="fpulang"><br>
-                    </form>
-                </div>
-                <div class="form3">
-                    <form class="flight" action="#">
-                        <label class="label_flight" for="flight_class">Kelas Penerbangan</label><br>
-                        <select class="select_flight" id="flight_class" name="class">
-                            <option value="ecconomy">ecconomy class</option>
-                            <option value="first">first class</option>
-                            <option value="business">business class</option>
+            <form action="{{url('/search/ticket')}}" method="get">
+                <div class="form_cari_penerbangan">
+                    <div class="form1">
+                        <label class="label_index" for="fdari">Dari</label>
+                        <select class="input_index left" type="text" id="fdari" name="fromCity">
+                            @foreach($fCity as $fromCity)
+                                <option value="{{$fromCity}}">{{$fromCity}}</option>
+                            @endforeach
                         </select>
-                    </form>
-                    <form class="passenger" action="#">
-                        <input class="passenger_form" id="adult" class="pass_number"type="number" min="0" step="1" value="0">
-                        <input class="passenger_form" id="kids" class="pass_number" type="number" min="0" step="1" value="0">
-                        <input class="passenger_form" id="baby" class="pass_number" type="number" min="0" step="1" value="0">
-                    </form>
+                        <label class="label_index" for="fberangkat">Berangkat</label>
+                        <select class="input_index left"type="text" id="fname" name="boardingTime">
+                            @foreach($bTime as $boardingTime)
+                                <option value="{{$boardingTime}}">{{$boardingTime}}</option>
+                            @endforeach
+                        </select>
+                        <label class="label_index" for="flight_class">Kelas Penerbangan</label>
+                        <select class="select_flight" id="flight_class" name="class">
+                            <option value="Ekonomi">Ekonomi</option>
+                            <option value="Bisnis">Bisnis</option>
+                            <option value="First">First</option>
+                        </select>
+                    </div>
+                    <div class="form2">
+                        <label class="label_index" for="fke">Ke</label>
+                        <select class="input_index right" type="text" id="fke" name="destinationCity">
+                            @foreach($dCity as $destinationCity)
+                                <option value="{{$destinationCity}}">{{$destinationCity}}</option>
+                            @endforeach
+                        </select>
+                        <label class="label_index" for="fpulang">Pulang</label>
+                        <select class="input_index right" type="text" id="fpulang" name="landingTime">
+                            @foreach($lTime as $landingTime)
+                                <option value="{{$landingTime}}">{{$landingTime}}</option>
+                            @endforeach
+                        </select>
+                        <span class="passenger">
+                            <!-- <input  id="adult" class="pass_number left" type="number" min="0" step="1" value="0">
+                            <input  id="kids" class="pass_number" type="number" min="0" step="1" value="0">
+                            <input  id="baby" class="pass_number right" type="number" min="0" step="1" value="0"> -->
+                        </span>
+                        <input class="submit_button" type="submit" value="Cari Penerbangan"> 
+                    
+                    </div>
                 </div>
-                <input class="submit_button" type="submit" value="Cari Penerbangan">
-            </div>
+            </form>
         </div>
     </div>
 

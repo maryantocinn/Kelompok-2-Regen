@@ -15,7 +15,7 @@
 	</style>
 
     <a href="/ticket">Home</a>
-        
+    <a href="/create/ticket">Create</a>   
     <form action="{{url('/search/ticket')}}" method="get">
         <input type="number" name="search" placeholder="Search Class">
         <button type="submit">Search</button>
@@ -57,7 +57,7 @@
 	Jumlah Data : {{ $data->total() }} <br/>
 	Data Per Halaman : {{ $data->perPage() }} <br/>
  
- 
+        
 	{{ $data->links() }}
 </body>
 </html>

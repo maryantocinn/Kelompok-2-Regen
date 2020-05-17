@@ -93,9 +93,13 @@ class TicketController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->search;
-
-        $data = Ticket::where('class','=',$search)->paginate(10);
+        $data = Ticket::where([
+            ['class','=',$request->class],
+            ['fromCity','=',$request->fromCity],
+            ['destinationCity','=',$request->destinationCity],
+            ['boardingTime','=',$request->boardingTime],
+            ['landingTime','=',$request->landingTime],
+        ])->paginate(6);
         return view('showTicket',compact('data'));
     }
 }

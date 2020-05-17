@@ -55,7 +55,7 @@ a{
 }
 /* Content */
 .content{
-    height: 28rem;
+    height: 40rem;
 }
 /* bagian atas */
 .registration{
@@ -91,6 +91,9 @@ a{
     border: 1px solid;
     border-radius: 20px;
     background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .registration_step{
     height:1rem;
@@ -111,28 +114,34 @@ a{
     background: slategray;
 }
 .form1{
-    margin-top: .5rem;
-    width: 100%;
+    margin-top: 1.5rem;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .label_index{
     padding-left: 15px;
     font-weight: 500;
     color: slategrey;
     width: 14rem;
+    margin-top: .5rem;
 }
 .label_flight{
     font-weight: 500;
     color: slategrey;
     padding-left: 1rem;
+    align-self: flex-start;
 }
 .select_flight{
     height: 2rem;
     width: 10rem;
     border-radius: 10px;
+    align-self: flex-start;
+}
+.passenger{
+    margin-top: 1.7rem;
+    align-self: flex-end;
+    justify-content: center;
 }
 .input_index{
     border: solid slategray 1px;
@@ -148,14 +157,13 @@ a{
     border-top-right-radius: 10px;
 }
 .form2{
-    margin-top: .5rem;
-    width: 100%;
+    margin-top: 1.5rem;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
-.form3{
+/* .form3{
     margin-top: .5rem;
     width: 28rem;
     display:flex;
@@ -163,25 +171,29 @@ a{
     align-items: center;
     justify-content: space-between;
     margin-left: 4rem;
-}
+} */
 .pass_number{
-    width: 5rem;
-    margin: 0 2px;
-}
-.passenger_form{
     width: 3rem;
+    height: 2rem;
+    margin: 0 0;
+    border: slategray 1px solid;
+    text-align: center;
 }
+
 .submit_button{
     width: 8rem;
     height: 2rem;
     margin-top: 1rem;
-    margin-left: 24rem;
     background-color: rgb(114, 194, 175);
     border-radius: 10px;
     border: 1px solid slategray;
-    justify-content: right;
-    font-weight: 560;
+    align-self: flex-end;
+    font-weight: 500;
     color: white;
+}
+.submit_button:active{
+    background-color: rgb(114, 180, 175);
+    border: 3px;
 }
 /* Footer */
 footer{
@@ -445,7 +457,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     margin-top:.7rem;
     padding-left: 10px;
-    color: black;
+    color: whitesmoke;
 }
 .register_email_right{
     margin-right: 2rem;
