@@ -35,6 +35,7 @@ a{
     font-size:20px;
     font-weight: 500;
     align-self: center;
+    font-family: 'Lato';
 }
 .navbar_items:hover{
     cursor: pointer;
@@ -126,6 +127,7 @@ a{
     color: slategrey;
     width: 14rem;
     margin-top: .5rem;
+    font-family: 'Lato';
 }
 .label_flight{
     font-weight: 500;
@@ -245,6 +247,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .login_title{
     font-size: x-large;
+    font-family: 'Lato';
 }
 .input{
     border-radius: 10px;
@@ -261,12 +264,14 @@ input[type=number]::-webkit-outer-spin-button {
 .rmb_label{
     margin-left: .5rem;
     font-size: medium;
+    font-family: 'Lato';
 }
 .forgot{
     color: rgb(114, 194, 175);
     text-decoration: none;
     font-size: small;
     align-self: center;
+    font-family: 'Lato';
 }
 .forgot:hover{
     text-decoration: underline; 
@@ -299,6 +304,7 @@ input[type=number]::-webkit-outer-spin-button {
 .newto{
     text-decoration: none;
     color: rgb(114, 194, 175);
+    font-family: 'Lato';
 }
 .createnew_button{
     display: flex;
@@ -358,6 +364,7 @@ input[type=number]::-webkit-outer-spin-button {
 .judul{
     font-size: x-large;
     text-transform: capitalize;
+    font-family: 'Lato';
 }
 .regis_name{
     display: flex;
@@ -414,6 +421,7 @@ input[type=number]::-webkit-outer-spin-button {
     color:white;
     font-size: medium;
     border: 0;
+    font-family: 'Lato';
 }
 
 
@@ -741,6 +749,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /* Profile page*/
 .navbar_profile{
+
+
+
+/*Change Pass*/
+.navbar_pass{
     padding: 0 4rem;
     height: 8rem;
     background-color: white;
@@ -869,4 +882,154 @@ input[type=number]::-webkit-outer-spin-button {
     border: solid aquamarine;
     background-color: aquamarine;
     font-size: medium;
+}
+.logo_pass{
+    height:4rem;
+}
+.company_name_pass{
+    margin-left: 5px;
+    height:2.5rem;
+    margin-bottom: .5rem;
+}
+.navbar_menu_pass{
+    list-style: none;
+    display: inline-flex;
+}
+.navbar_items_pass{
+    margin: 0 5vh;
+    text-transform: capitalize;
+    font-family: 'Lato';
+    color: gray;
+    font-size:20px;
+    font-weight: 600;
+    align-self: center;
+}
+.navbar_items_pass:hover{
+    cursor: pointer;
+    margin: 0 5vh;
+    text-transform: capitalize;
+    font-size:20px;
+    font-weight: 600;
+    color: rgb(109, 247, 205);
+}
+.person_pass{
+    width: 50px;
+    height: 50px;
+    border-radius: 10% 10%;
+}
+.change_pass_form{
+    margin-top: 2rem;
+    margin-left: 6rem;  
+    margin-bottom: 5rem;
+    width:30rem;
+    height:25rem ;
+    padding: 0 3rem;
+    background-color: whitesmoke;
+    border: whitesmoke 2px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.change_pass_email{
+    font-family: 'Lato';
+    color: gray;
+    font-size: larger;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.old_pass_title,
+.new_pass_title{
+    font-family: 'Lato';
+    color: gray;
+    font-size: larger;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.change_pass_email_user{
+    font-family: 'Lato';
+    color: black;
+    font-size: larger;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.input_change_pass{
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 70%;
+    margin-top:.7rem;
+    padding-left: 10px;
+    color: black;
+}
+.save_pass_button{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-left: 12rem;
+}
+.save{
+    width: 50%;
+    height: 2.2rem;
+    font-size: large;
+    color: white;
+    background-color: rgb(114, 194, 175);
+    border:0px;
+    border-radius: 1rem;
+    font-family: 'Lato';
+}
+.save:hover{
+    cursor:pointer;
+    background-color: rgb(109, 247, 205);
+}
+.copyright_pass{
+    font-family: 'Lato';
+    color: gray;
+    font-size: large;
+}
+
+
+
+
+/*Cart*/
+.navbar_cart{
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_cart{
+    height:4rem;
+}
+.company_name_cart{
+    margin-left: 5px;
+    height:2.5rem;
+    margin-bottom: .5rem;
+}
+.cart_form{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width:70rem;
+    height:40rem ;
+    padding: 0 3rem;
+    background-color: white;
+    border: whitesmoke 4px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cart_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright_cart{
+    font-family: 'Lato';
+    color: gray;
+    font-size: large;
+    margin-bottom: 3rem;
 }
