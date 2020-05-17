@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth',['except'=>'welcome']);
     }
 
     /**
@@ -28,7 +28,9 @@ class HomeController extends Controller
     public function welcome()
     {
         $user = Auth::user();
-        $datas = User::find($user->id);
+        if($user!=NULL){
+            $datas = User::find($user->id);
+        }
         $fCity = Ticket::pluck('fromCity')->unique();
         $dCity = Ticket::pluck('destinationCity')->unique();
         $bTime = Ticket::pluck('boardingTime')->unique();
