@@ -490,7 +490,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: large;
     text-transform: uppercase;
     color: gray;
-    background-color: whitesmoke;
     border:1px;
     border-radius: 1rem;
 }
@@ -502,6 +501,7 @@ input[type=number]::-webkit-outer-spin-button {
     border: 0;
     cursor: pointer;
     background-color: whitesmoke;
+    padding: 10px;
     font-size: large;
     color: black;
 }

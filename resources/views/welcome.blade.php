@@ -17,7 +17,9 @@
             <li class="navbar_items">cart</li>
             @auth
                 <li class="navbar_items"><a href="/home">{{$datas->email}}</a></li>
-                <li class="navbar_items"><a href="/home">phto</a></li>
+                @if($datas->profile_picture != NULL)
+                <img class="navbar_items" src="{{url('/profile/'.$datas->profile_picture)}}" width=80px>
+                @endif
             @else
                 <li class="navbar_items"><a href="/login">login</a></li>
                 <li class="navbar_items"><a href="/register"><button>Register</button></a></li>

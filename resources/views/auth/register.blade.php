@@ -15,7 +15,7 @@
         <img class="namee" src="{{asset('img/nama.png')}}">
     </div>
     <div >
-        <form method="POST" action="{{ route('register') }}" class="register_email_form" ">
+        <form method="POST" action="{{ route('register') }}" class="register_email_form" enctype="multipart/form-data" >
         @csrf
             <div class="register_email_left">
                 <div class="register_email_title">
@@ -55,10 +55,12 @@
                 </div>
                 <div class="register_email_button">
                     <div class="register_email_choose">
-                        <a href="#"><button class="choosefile1">Choose File</button></a>
+                        
+                        <label class="choosefile1" for="file-upload">Choose File</label>
+                        <input type="file" id="file-upload" name="profile_picture" style="display:none">
                     </div>
                     <div class="yes_button">
-                        <a href="confirm.html"><button class="yes">Yes!</button></a>
+                        <button type="Submit" class="yes">Yes!</button>
                     </div>      
                 </div>
             </div>
