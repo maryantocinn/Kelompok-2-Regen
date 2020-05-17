@@ -763,24 +763,25 @@ input[type=number]::-webkit-outer-spin-button {
     display: inline-flex;
 }
 .navbar_items_pass{
-    margin: 0 1vh;
+    margin: 0 5vh;
     text-transform: capitalize;
-    font font-family: 'Lato';
+    font-family: 'Lato';
+    color: gray;
     font-size:20px;
     font-weight: 600;
     align-self: center;
 }
 .navbar_items_pass:hover{
     cursor: pointer;
-    margin: 0 1vh;
+    margin: 0 5vh;
     text-transform: capitalize;
     font-size:20px;
     font-weight: 600;
-    color: darkblue;
+    color: rgb(109, 247, 205);
 }
 .person_pass{
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 10% 10%;
 }
 .change_pass_form{
