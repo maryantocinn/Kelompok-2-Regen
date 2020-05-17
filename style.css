@@ -738,3 +738,117 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     margin-top: 1rem;
 }
+
+
+
+/*Change Pass*/
+.navbar_pass{
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_pass{
+    height:4rem;
+}
+.company_name_pass{
+    margin-left: 5px;
+    height:2.5rem;
+    margin-bottom: .5rem;
+}
+.navbar_menu_pass{
+    list-style: none;
+    display: inline-flex;
+}
+.navbar_items_pass{
+    margin: 0 1vh;
+    text-transform: capitalize;
+    font font-family: 'Lato';
+    font-size:20px;
+    font-weight: 600;
+    align-self: center;
+}
+.navbar_items_pass:hover{
+    cursor: pointer;
+    margin: 0 1vh;
+    text-transform: capitalize;
+    font-size:20px;
+    font-weight: 600;
+    color: darkblue;
+}
+.person_pass{
+    width: 20px;
+    height: 20px;
+    border-radius: 10% 10%;
+}
+.change_pass_form{
+    margin-top: 2rem;
+    margin-left: 6rem;  
+    margin-bottom: 5rem;
+    width:30rem;
+    height:25rem ;
+    padding: 0 3rem;
+    background-color: whitesmoke;
+    border: whitesmoke 2px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.change_pass_email{
+    font-family: 'Lato';
+    color: gray;
+    font-size: larger;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.old_pass_title,
+.new_pass_title{
+    font-family: 'Lato';
+    color: gray;
+    font-size: larger;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.change_pass_email_user{
+    font-family: 'Lato';
+    color: black;
+    font-size: larger;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.input_change_pass{
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 70%;
+    margin-top:.7rem;
+    padding-left: 10px;
+    color: black;
+}
+.save_pass_button{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-left: 12rem;
+}
+.save{
+    width: 50%;
+    height: 2.2rem;
+    font-size: large;
+    color: white;
+    background-color: rgb(114, 194, 175);
+    border:0px;
+    border-radius: 1rem;
+    font-family: 'Lato';
+}
+.save:hover{
+    cursor:pointer;
+    background-color: rgb(109, 247, 205);
+}
+.copyright_pass{
+    font-family: 'Lato';
+    color: gray;
+    font-size: large;
+}
