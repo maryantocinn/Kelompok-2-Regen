@@ -27,7 +27,7 @@
                 in the picture
             </p> 
             </div>
-            <form class="regis_name" action="{{url('register/ktp/'.$user->id)}}" method="POST">
+            <form class="regis_name" action="{{url('register/ktp/'.$user->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 {{method_field('PUT')}} 
                 <div class="confirm_button">

@@ -28,3 +28,7 @@ Route::get('/register/info','HomeController@info');
 Route::put('/register/info/{user}','HomeController@submitInfo');
 Route::get('/register/ktp','HomeController@ktp');
 Route::put('/register/ktp/{user}','HomeController@submitKTP');
+Route::get('/account','HomeController@editProfile');
+Route::put('/account/{user}','HomeController@submitProfile');
+Route::get('/account/changepassword','HomeController@editPassword');
+Route::put('/account/submitpassword/{user}','HomeController@submitPassword');

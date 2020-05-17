@@ -42,7 +42,11 @@
                     <input class="rmb form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="rmb_label" for="remmember">Remember my password</label>
                 </span>
-                <a class="forgot" href="#">Forgot password?</a>
+                @if (Route::has('password.request'))
+                    <a class="forgot btn btn-link" href="{{ route('password.request') }}">
+                        {{ __('Forgot Your Password?') }}
+                    </a>
+                @endif
             </div>
             <div class="login_button">
                 <input class="lgn_button" type="submit" id="login" value="Log In"> 

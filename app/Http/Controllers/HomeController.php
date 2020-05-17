@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
@@ -73,5 +74,39 @@ class HomeController extends Controller
             $user->update(['ktp'=>$name]);
         }
         return view('registerSuccess');
+    }
+
+    public function editProfile()
+    {
+        $user = Auth::user();
+        return view('editProfile',compact('user'));
+    }
+
+    public function submitProfile(Request $request, User $user)
+    {
+        $user->update($request->all());
+        if(request()->hasFile('profile_picture')){
+            $name = time()."_".request()->file('profile_picture')->getClientOriginalName();
+            request()->file('profile_picture')->move('profile',$name);
+            $user->update(['profile_picture'=>$name]);
+        }
+        return redirect('/account');
+    }
+
+    public function editPassword()
+    {
+        $user = Auth::user();
+        return view('changePass',compact('user'));
+    }
+
+    public function submitPassword(Request $request, User $user)
+    {
+        if(Hash::check($request->old_password,$user->password)){
+            $user->update(['password'=>Hash::make('$request->new_password')]);
+            $user->save();
+            return redirect('/account');
+        }else{
+            return redirect('/account/changepassword');
+        }
     }
 }

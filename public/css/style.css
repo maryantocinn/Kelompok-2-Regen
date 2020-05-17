@@ -16,14 +16,7 @@ a{
     align-items: center;
     justify-content: space-between;
 }
-.navbar_profile{
-    padding: 0 4rem;
-    height: 8rem;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 .logo{
     height:4rem;
 }
@@ -40,7 +33,7 @@ a{
     margin: 0 1vh;
     text-transform: capitalize;
     font-size:20px;
-    font-weight: 600;
+    font-weight: 500;
     align-self: center;
     font-family: 'Lato';
 }
@@ -756,194 +749,248 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Profile page*/
-.profile_content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.profile_form{
-    display: flex;
-    flex-direction: row;
-    width: 90vw;
-    height: 20rem;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: lightgray;
-    border-radius: 25px;
-}
-.profile_col_1{
-    display: flex;
-    flex-direction: column;
-}
-.profile_col_right{
-    display: flex;
-    flex-direction: row;
-}
-.profile_col_2{
-    display: flex;
-    padding-top: 2rem;
-    flex-direction: column;
-    justify-self: flex-end;
-    align-items: flex-start;
-    height: 100%;
-}
-.profile_col_3{
-    padding-top: 2rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.profile_label{
-    font-size: medium;
-    color: slategray;
-    margin: 5px 5px 0 0;
-    height: 2rem;
-    align-self:flex-start;
-    justify-items: center;
-}
-.profile_input{
-    height: 2rem;
-    margin: 2px 0;
-    width: 25vw;
-    border-radius: 10px;
-    border: solid lightslategray 2px;
-    padding-left:.5rem;
-}
-.save_link{
-    margin-top: 1rem;
-    height:2rem;
-    align-self: flex-end;
-    justify-self: flex-end;
-}
-.save_button{
-    height:2rem;
-    width: 10rem;
-    align-self: flex-end;
-    justify-self: flex-end;
-    border-radius: 10px;
-    border: solid aquamarine;
-    background-color: aquamarine;
-    font-size: medium;
-}
-.email_pass{
-    margin: 2rem 0;
-    width: 50vw;
-    height: 15rem;
-    background-color: lightgray;
-    border-radius: 25px;
-}
-
-/*Change Pass*/
-.navbar_pass{
+.navbar_profile{
     padding: 0 4rem;
-    height: 8rem;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo_pass{
-    height:4rem;
-}
-.company_name_pass{
-    margin-left: 5px;
-    height:2.5rem;
-    margin-bottom: .5rem;
-}
-.navbar_menu_pass{
-    list-style: none;
-    display: inline-flex;
-}
-.navbar_items_pass{
-    margin: 0 5vh;
-    text-transform: capitalize;
-    font-family: 'Lato';
-    font-size:20px;
-    font-weight: 600;
-    align-self: center;
-}
-.navbar_items_pass:hover{
-    cursor: pointer;
-    margin: 0 5vh;
-    text-transform: capitalize;
-    font-size:20px;
-    font-weight: 600;
-    color:rgb(109, 247, 205);
-}
-.person_pass{
-    width: 50px;
-    height: 50px;
-    border-radius: 10% 10%;
-}
-.change_pass_form{
-    margin-top: 2rem;
-    margin-left: 6rem;  
-    margin-bottom: 5rem;
-    width:30rem;
-    height:25rem ;
-    padding: 0 3rem;
-    background-color: whitesmoke;
-    border: whitesmoke 2px solid;
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.change_pass_email{
-    font-family: 'Lato';
-    color: gray;
-    font-size: larger;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-.old_pass_title,
-.new_pass_title{
-    font-family: 'Lato';
-    color: gray;
-    font-size: larger;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.change_pass_email_user{
-    font-family: 'Lato';
-    color: black;
-    font-size: larger;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.input_change_pass{
-    border-radius: 10px;
-    height: 2.5rem;
-    width: 70%;
-    margin-top:.7rem;
-    padding-left: 10px;
-    color: black;
-}
-.save_pass_button{
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    margin-left: 12rem;
-}
-.save{
-    width: 50%;
-    height: 2.2rem;
-    font-size: large;
-    color: white;
-    background-color: rgb(114, 194, 175);
-    border:0px;
-    border-radius: 1rem;
-    font-family: 'Lato';
-}
-.save:hover{
-    cursor:pointer;
-    background-color: rgb(109, 247, 205);
-}
-.copyright_pass{
-    font-family: 'Lato';
-    color: gray;
-    font-size: large;
-} 
+        height: 8rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }   
+    .navbar_pass{
+        padding: 0 4rem;
+        height: 8rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .profile_pic_nav{
+        height:5rem;
+        border-radius: 3rem;
+        background-color: slategray;
+    }
+    .pic_link{
+        height: 5rem;
+        width: 4rem;
+    }
+    .profile_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile_form{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: 25rem;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(227, 227, 227);
+        border-radius: 25px;
+    }
+    .profile_col_1{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        height: 100%;
+        justify-content: center;
+    }
+    .profile_col_right{
+        display: flex;
+        flex-direction: row;
+    }
+    .profile_col_2{
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-end;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+    .profile_col_3{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        justify-content: center;
+    }
+    .img_disp{
+        height:10rem;
+        width: 10rem;
+        justify-content: center;
+        background-color: gray;
+        border-radius: 5rem;
+    }
+    .profile_change_pic_bt{
+        margin-top: 1rem;
+        height: 2rem;
+        border-radius: 20px;
+        border: solid slategray 1px;
+        background-color: white;
+    }
+    .email_pass{
+        margin: 2rem 0;
+        padding: 2rem;
+        width: 50vw;
+        height: 15rem;
+        background-color: rgb(227, 227, 227);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .email_pass_detail{
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        text-transform: capitalize ;
+    
+    }
+    .chg_pass{
+        border-radius: 1rem;
+        width: 20rem;
+        height: 2rem;
+        justify-self: center;
+        align-self: flex-end;
+        border: slategray 1px solid;
+    }
+    .profile_label{
+        font-size: small;
+        color: slategray;
+        margin: 1rem 10px 0 0;
+        height: 2rem;
+        align-self:flex-start;
+        justify-items: center;
+        padding-top: 7px;
+    }
+    .profile_input{
+        height: 2rem;
+        margin: 1rem 0 0 0;
+        width: 25vw;
+        border-radius: 10px;
+        border: solid lightslategray 1px;
+        padding-left:.5rem;
+    }
+    .save_link{
+        margin-top: 1rem;
+        height:2rem;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+    .save_button{
+        height:2rem;
+        width: 10rem;
+        align-self: flex-end;
+        justify-self: flex-end;
+        border-radius: 10px;
+        border: solid aquamarine;
+        background-color: aquamarine;
+        font-size: medium;
+    }
+    .logo_pass{
+        height:4rem;
+    }
+    .company_name_pass{
+        margin-left: 5px;
+        height:2.5rem;
+        margin-bottom: .5rem;
+    }
+    .navbar_menu_pass{
+        list-style: none;
+        display: inline-flex;
+    }
+    .navbar_items_pass{
+        margin: 0 5vh;
+        text-transform: capitalize;
+        font-family: 'Lato';
+        color: gray;
+        font-size:20px;
+        font-weight: 600;
+        align-self: center;
+    }
+    .navbar_items_pass:hover{
+        cursor: pointer;
+        margin: 0 5vh;
+        text-transform: capitalize;
+        font-size:20px;
+        font-weight: 600;
+        color: rgb(109, 247, 205);
+    }
+    .person_pass{
+        width: 50px;
+        height: 50px;
+        border-radius: 10% 10%;
+    }
+    .change_pass_form{
+        margin-top: 2rem;
+        margin-left: 6rem;  
+        margin-bottom: 5rem;
+        width:30rem;
+        height:25rem ;
+        padding: 0 3rem;
+        background-color: whitesmoke;
+        border: whitesmoke 2px solid;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .change_pass_email{
+        font-family: 'Lato';
+        color: gray;
+        font-size: larger;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .old_pass_title,
+    .new_pass_title{
+        font-family: 'Lato';
+        color: gray;
+        font-size: larger;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .change_pass_email_user{
+        font-family: 'Lato';
+        color: black;
+        font-size: larger;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .input_change_pass{
+        border-radius: 10px;
+        height: 2.5rem;
+        width: 70%;
+        margin-top:.7rem;
+        padding-left: 10px;
+        color: black;
+    }
+    .save_pass_button{
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        margin-left: 12rem;
+    }
+    .save{
+        width: 50%;
+        height: 2.2rem;
+        font-size: large;
+        color: white;
+        background-color: rgb(114, 194, 175);
+        border:0px;
+        border-radius: 1rem;
+        font-family: 'Lato';
+    }
+    .save:hover{
+        cursor:pointer;
+        background-color: rgb(109, 247, 205);
+    }
+    .copyright_pass{
+        font-family: 'Lato';
+        color: gray;
+        font-size: large;
+    }
+    
 /*Cart*/
 .navbar_cart{
     padding: 0 4rem;
