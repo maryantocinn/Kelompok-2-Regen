@@ -748,11 +748,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 1rem;
 }
 /* Profile page*/
-.navbar_profile{
-
-
-
-/*Change Pass*/
 .navbar_pass{
     padding: 0 4rem;
     height: 8rem;
@@ -1033,3 +1028,4 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: large;
     margin-bottom: 3rem;
 }
+/* change password page */
