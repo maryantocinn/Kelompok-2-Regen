@@ -67,7 +67,11 @@ a{
     background-color: rgb(114, 194, 175);
 }
 .slides{
-    display: none ;
+    max-height: 20rem;
+    /* display: none ; */
+}
+.carousel_image{
+    max-height: 20rem;
 }
 .numbertext {
     color: #f2f2f2;
@@ -76,6 +80,34 @@ a{
     position: absolute;
     top: 0;
   }
+.carousel_dots{
+    text-align: center;
+}
+.prev{
+    left:5vw ;
+}
+.next {
+    right: 5vw;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 14rem;
+    height: 3rem;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+.prev>img{
+    height: 100%;
+}
+.next>img{
+    height: 100%;
+}
 .dot {
     cursor: pointer;
     height: 10px;
@@ -89,6 +121,16 @@ a{
   .active, .dot:hover {
     background-color: #717171;
   }
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
   
 .fade {
     -webkit-animation-name: fade;
@@ -120,22 +162,17 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
-    height:15rem;
+    height:20rem;
     background-color: rgb(114, 194, 175);
 }
-.arrow_left{
-    order: 1;
-}
-.arrow_right{
-    order: 3;
-} 
+
 /* FORMNYA */
 .form_cari_penerbangan{
     height: 16rem;
     width: 36rem;
     margin-left: -18rem;
     position: absolute;
-    top: 19rem;
+    top: 23rem;
     left: 50%;
     border: 1px solid;
     border-radius: 20px;
@@ -149,7 +186,7 @@ a{
     width: 100%;
     display: inline-flex;
     position: absolute;
-    top: 17.5rem;
+    top: 21.5rem;
     flex-direction: row;
     align-items: center;
     justify-content: center;
