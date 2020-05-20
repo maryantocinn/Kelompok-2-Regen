@@ -60,20 +60,42 @@ a{
     height: 40rem;
 }
 /* Carousel */
-.carousel-container {
-    width: 80vh;
-    display: flex;
-    flex-direction: row;
+.carousel{
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    margin: 0 0;
     background-color: rgb(114, 194, 175);
+    overflow: hidden;
+}
+.carousel-container {
+    height: 100%;
+    position: relative;
+    background-color: rgb(114, 194, 175);
+}
+.carousel_track{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+.carousel_slide{
+    position: absolute;
+    width: inherit;
+    height: 20rem;
+    margin-left: 0;
 }
 .slides{
     max-height: 20rem;
     /* display: none ; */
 }
 .carousel_image{
-    max-height: 20rem;
-    align-self: center;
-    justify-self: center;
+    height: 100%;
+    width: 50vw;
+    margin: 0 24vw ;
+    object-fit: cover;
 }
 .numbertext {
     color: #f2f2f2;
@@ -82,37 +104,55 @@ a{
     position: absolute;
     top: 0;
   }
-.carousel_dots{
+.carousel_button{
+    position: absolute;
+    top: 30rem;
+    transform: translateY(-50%);
     text-align: center;
+    border: 0;
+}
+.carousel_button>img{
+    position: absolute;
+    height: 100%;
 }
 .prev{
-    left:7vw ;
-}
-.next {
-    right: 7vw;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 14rem;
+    left:4vw;
     height: 3rem;
+    cursor: pointer;
     width: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
+    top: 10rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-.prev>img{
-    height: 100%;
 }
-.next>img{
-    height: 100%;
+.next {
+    right: 7vw;
+    top:10rem;
+    cursor: pointer;
+    /* transition: 0.6s ease; */
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    height: 3rem;
 }
-  .active, .dot:hover {
-    background-color: #717171;
-  }
+.carousel_nav{
+    position:absolute;
+    top: 26rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+.carousel_indicator{
+    border:0;
+    border-radius: 4px;
+    width: 50px;
+    height: 10px;
+    background-color: slategrey;
+    margin: 0 10px;
+}
+.current_slide{
+    background-color: lightgray;
+}
 .carousel_caption {
     color: #f2f2f2;
     font-size: large;
@@ -120,10 +160,7 @@ a{
     top: 24rem;
     right: 46vw;
     text-align: center;
-  }  
-.slidex{
-    display: none;
-}
+}  
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -144,7 +181,7 @@ a{
 .registration{
     height:inherit;
 }
-.segmen_arrow{
+/* .segmen_arrow{
     z-index: 0;
     display: flex;
     align-items: center;
@@ -152,8 +189,8 @@ a{
     padding: 0 4rem;
     height:20rem;
     background-color: rgb(114, 194, 175);
-}
-.registration_step{
+} */
+/* .registration_step{
     height:1rem;
     width: 100%;
     display: inline-flex;
@@ -162,7 +199,7 @@ a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
+} */
 /* FORMNYA */
 .form_cari_penerbangan{
     height: 16rem;
