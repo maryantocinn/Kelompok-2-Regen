@@ -466,7 +466,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     margin-top:.7rem;
     padding-left: 10px;
-    color: whitesmoke;
+    color: black;
 }
 .register_email_right{
     margin-right: 2rem;
@@ -771,7 +771,7 @@ input[type=number]::-webkit-outer-spin-button {
         background-color: slategray;
     }
     .pic_link{
-        height: 5rem;
+        height: 4rem;
         width: 4rem;
     }
     .profile_content{

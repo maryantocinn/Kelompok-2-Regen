@@ -12,13 +12,28 @@
 <body>
     <nav class="navbar_pass">
         <span class="navbar_logo_pass">
-            <img class="logo_pass" src="{{asset('img/1132272.png')}}">
-            <img class="company_name_pass" src="{{asset('img/nama.png')}}">
+            <a href="/"><img class="logo_pass" src="{{asset('img/1132272.png')}}"></a>
+            <a href="/"><img class="company_name_pass" src="{{asset('img/nama.png')}}"></a>
         </span>
         <ul class="navbar_menu_pass">
-            <li class="navbar_items_pass">Cart</li>
-            <li class="navbar_items_pass">Name</li>
-            <img class="person_pass" src="{{asset('img/profile.gif')}}">
+        <li class="navbar_items">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                Log Out
+                </a>
+            </li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            <li class="navbar_items"><a href="/account">{{$user->front_name}} {{$user->last_name}}</a></li>
+            <li class="pic_link navbar_items ">
+                <a class="pic_link" href="/account">
+                    @if($user->profile_picture != NULL)
+                        <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$user->profile_picture)}}" alt="profile picture">
+                    @else
+                        <img class="pic_link profile_pic_nav" src="{{asset('img/profile.gif')}}" alt="profile picture">
+                    @endif
+                </a>
+            </li>
         </ul>
     </nav>
     <form action="{{url('/account/submitpassword/'.$user->id)}}" method="POST">

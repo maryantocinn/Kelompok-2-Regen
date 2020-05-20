@@ -11,15 +11,17 @@
 <body>
     <nav class="navbar">
         <span class="navbar_Logo">
-            <img class="logo" src="{{asset('img/1132272.png')}}">
-            <img class="company_name" src="{{asset('img/nama.png')}}">
+            <a href="/">
+                <img class="logo" src="{{asset('img/1132272.png')}}">
+                <img class="company_name" src="{{asset('img/nama.png')}}">
+            </a>
         </span>
         <ul class="navbar_menu">
-            <li class="navbar_items">cart</li>
+            <li class="navbar_items">@auth<a href="/cart">cart</a>@endauth</li>
             @auth
                 <li class="navbar_items"><a href="/account">{{$datas->front_name}} {{$datas->last_name}}</a></li>
                 @if($datas->profile_picture != NULL)
-                <img class="navbar_items" src="{{url('/profile/'.$datas->profile_picture)}}" width=80px>
+                <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$datas->profile_picture)}}">
                 @endif
             @else
                 <li class="navbar_items"><a href="/login">login</a></li>
@@ -77,12 +79,8 @@
                             @endforeach
                         </select>
                         <span class="passenger">
-                            <!-- <input  id="adult" class="pass_number left" type="number" min="0" step="1" value="0">
-                            <input  id="kids" class="pass_number" type="number" min="0" step="1" value="0">
-                            <input  id="baby" class="pass_number right" type="number" min="0" step="1" value="0"> -->
                         </span>
                         <input class="submit_button" type="submit" value="Cari Penerbangan"> 
-                    
                     </div>
                 </div>
             </form>

@@ -11,8 +11,8 @@
 </head>
 <body class="confirm_body">
     <div class="logo_confirm_name">
-        <img class="logoc" src="{{asset('img/1132272.png')}}">
-        <img class="namec" src="{{asset('img/nama.png')}}">
+        <a href="/"><img class="logoc" src="{{asset('img/1132272.png')}}"></a>
+        <a href="/"><img class="namec" src="{{asset('img/nama.png')}}"></a>
     </div>
 
     <div class="confirm_form">

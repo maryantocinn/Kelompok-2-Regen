@@ -16,12 +16,21 @@
             </span>
         </a>
         <ul class="navbar_menu">
-            <li class="navbar_items">Log Out</li>
+            <li class="navbar_items">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                Log Out
+                </a>
+            </li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
             <li class="navbar_items"><a href="#">{{$user->front_name}} {{$user->last_name}}</a></li>
             <li class="pic_link navbar_items ">
-                <a class="pic_link" href="profile.html">
+                <a class="pic_link" href="#">
                     @if($user->profile_picture != NULL)
                         <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$user->profile_picture)}}" alt="profile picture">
+                    @else
+                    <img class="pic_link profile_pic_nav" src="{{asset('img/profile.gif')}}" alt="profile picture">
                     @endif
                 </a>
             </li>

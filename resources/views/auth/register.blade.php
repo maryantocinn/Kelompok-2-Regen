@@ -12,8 +12,8 @@
 </head>
 <body class="register_email_body">
     <div class="register_email_logo">
-        <img class="logoe" src="{{asset('img/1132272.png')}}">
-        <img class="namee" src="{{asset('img/nama.png')}}">
+        <a href="/"><img class="logoe" src="{{asset('img/1132272.png')}}"></a>
+        <a href="/"><img class="namee" src="{{asset('img/nama.png')}}"></a>
     </div>
     <div >
         <form method="POST" action="{{ route('register') }}" class="register_email_form" enctype="multipart/form-data" >
