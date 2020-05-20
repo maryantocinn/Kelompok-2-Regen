@@ -102,8 +102,7 @@ class HomeController extends Controller
     public function submitPassword(Request $request, User $user)
     {
         if(Hash::check($request->old_password,$user->password)){
-            $user->update(['password'=>Hash::make('$request->new_password')]);
-            $user->save();
+            $user->update(['password'=>Hash::make($request->new_password)]);
             return redirect('/account');
         }else{
             return redirect('/account/changepassword');

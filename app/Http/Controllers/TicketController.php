@@ -6,6 +6,8 @@ use App\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\Auth;
+
 class TicketController extends Controller
 {
     /**
@@ -93,6 +95,7 @@ class TicketController extends Controller
 
     public function search(Request $request)
     {
+        $user = Auth::user();
         $data = Ticket::where([
             ['class','=',$request->class],
             ['fromCity','=',$request->fromCity],
@@ -100,6 +103,7 @@ class TicketController extends Controller
             ['boardingTime','=',$request->boardingTime],
             ['landingTime','=',$request->landingTime],
         ])->paginate(6);
-        return view('showTicket',compact('data'));
+        // dd($data);
+        return view('showTicket',compact('data','user'));
     }
 }

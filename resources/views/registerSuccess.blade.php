@@ -11,8 +11,8 @@
 </head>
 <body class="success_body">
     <div class="logo_success_name">
-        <img class="logos" src="{{asset('img/1132272.png')}}">
-        <img class="names" src="{{asset('img/nama.png')}}">
+        <a href="/"><img class="logos" src="{{asset('img/1132272.png')}}"></a>
+        <a href="/"><img class="names" src="{{asset('img/nama.png')}}"></a>
     </div>
     <div class="success_form">
         <div class="success_desc">

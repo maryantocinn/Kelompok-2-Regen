@@ -11,7 +11,7 @@
 <body class="login_body">
     <div class="logo_name_holder">
         <a href="/"><img class="logom" src="{{asset('img/1132272.png')}}"></a>
-        <img class="namem"src="{{asset('img/nama.png')}}">
+        <a href="/"><img class="namem"src="{{asset('img/nama.png')}}"></a>
     </div>
     <div class="login_form">
         <div class="login_title">
@@ -19,7 +19,7 @@
         </div>
 
         <form method="POST" action="{{ route('login') }}">
-        @csrf
+            @csrf
             <div class="email_box">
                 <input class="input form-control @error('email') is-invalid @enderror" type="email" id="email" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')

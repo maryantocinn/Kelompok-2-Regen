@@ -12,18 +12,43 @@
 <body>
     <nav class="navbar_cart">
         <span class="navbar_logo_cart">
-            <img class="logo_cart" src="{{asset/('img/1132272.png')}}">
-            <img class="company_name_cart" src="{{asset('img/nama.png')}}">
+            <a href="/"><img class="logo_cart" src="{{asset('img/1132272.png')}}"></a>
+            <a href="/"><img class="company_name_cart" src="{{asset('img/nama.png')}}"></a>
         </span>
         <ul class="navbar_menu">
-            <li class="navbar_items">Cart</li>
-            <li class="navbar_items"><a href="/login">Login</a></li>
-            <li class="navbar_items"><a href="/register"><button>Register</button></a></li>
+        <li class="navbar_items">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                Log Out
+                </a>
+            </li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            <li class="navbar_items"><a href="/account">{{$user->front_name}} {{$user->last_name}}</a></li>
+            <li class="pic_link navbar_items ">
+                <a class="pic_link" href="/account">
+                    @if($user->profile_picture != NULL)
+                        <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$user->profile_picture)}}" alt="profile picture">
+                    @else
+                    <img class="pic_link profile_pic_nav" src="{{asset('img/profile.gif')}}" alt="profile picture">
+                    @endif
+                </a>
+            </li>
         </ul>
     </nav>
     <div class="cart_body">
         <div class="cart_form">
-            
+            @foreach($cart as $item)
+                <ul>
+                    {{$item->ticket->airline}}
+                    {{$item->ticket->fromCity}} 
+                    {{$item->ticket->destinationCity}}
+                    {{$item->ticket->boardingTime}}
+                    {{$item->ticket->landingTime}}
+                    {{$item->child_count}}
+                    {{$item->adult_count}}
+                </ul>         
+            @endforeach
         </div>    
     </div>
 
