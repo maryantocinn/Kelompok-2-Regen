@@ -54,14 +54,8 @@ class CartController extends Controller
     public function show()
     {
         $user=Auth::user();
-        if($user ==  NULL){
-            redirect('/login');
-        }else{
-            $cart = User::find($user->id)->cart;
-            // dd($cart);
-            return view('cart',compact('cart'));
-        }
-        
+        $cart = User::find($user->id)->cart;
+        return view('cart',compact('cart'));
     }
 
     /**

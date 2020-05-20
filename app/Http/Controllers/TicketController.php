@@ -96,19 +96,14 @@ class TicketController extends Controller
     public function search(Request $request)
     {
         $user = Auth::user();
-        if($user == NULL){
-            redirect('/login');
-        }else{
-            $data = Ticket::where([
-                ['class','=',$request->class],
-                ['fromCity','=',$request->fromCity],
-                ['destinationCity','=',$request->destinationCity],
-                ['boardingTime','=',$request->boardingTime],
-                ['landingTime','=',$request->landingTime],
-            ])->paginate(6);
-            // dd($data);
-            return view('showTicket',compact('data','user'));
-        }
-        
+        $data = Ticket::where([
+            ['class','=',$request->class],
+            ['fromCity','=',$request->fromCity],
+            ['destinationCity','=',$request->destinationCity],
+            ['boardingTime','=',$request->boardingTime],
+            ['landingTime','=',$request->landingTime],
+        ])->paginate(6);
+        // dd($data);
+        return view('showTicket',compact('data','user'));
     }
 }
