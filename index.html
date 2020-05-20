@@ -23,9 +23,30 @@
     <div class="content">
         <div class="registration">
             <div class="segmen_arrow">
-                <img class="arrow arrow_left" src="img/Arrow-Left-icon.png">
-                <img class="arrow arrow_right" src="img/Arrow-Right-icon.png">
-                
+                <div class="carousel_container">
+                    <img class="arrow arrow_left" src="img/Arrow-Left-icon.png">
+                    <div class="slides fade">
+                        <div class="number_txt">1 / 3</div>
+                        <img class="carousel_image" src="#" alt="picture1">
+                        <div class="carousel_caption">Caption one</div>
+                    </div>
+                    <div class="slides fade">
+                        <div class="number_txt">2 / 3</div>
+                        <img class="carousel_image" src="#" alt="picture1">
+                        <div class="carousel_caption">Caption one</div>
+                    </div>
+                    <div class="slides fade">
+                        <div class="number_txt">3 / 3</div>
+                        <img class="carousel_image" src="#" alt="picture1">
+                        <div class="carousel_caption">Caption one</div>
+                    </div>
+                    <img class="arrow arrow_right" src="img/Arrow-Right-icon.png">
+                </div>
+                <div class="carousel_dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
             </div>
             <div class="registration_step">
                 <span class="progress_bar step1"></span>
