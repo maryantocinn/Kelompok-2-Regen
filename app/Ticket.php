@@ -14,4 +14,8 @@ class Ticket extends Model
         "landingTime",
         "class"
     ];
+
+    public function cart(){
+        return $this->hasMany(Cart::class);
+    }
 }

@@ -32,3 +32,5 @@ Route::get('/account','HomeController@editProfile');
 Route::put('/account/{user}','HomeController@submitProfile');
 Route::get('/account/changepassword','HomeController@editPassword');
 Route::put('/account/submitpassword/{user}','HomeController@submitPassword');
+Route::post('/cart/add','CartController@store');
+Route::get('/cart','CartController@show');

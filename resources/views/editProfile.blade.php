@@ -9,15 +9,15 @@
 </head>
 <body>
     <nav class="navbar_profile">
-        <a href="index.html" class="navbar_Logo"> 
+        <a href="/" class="navbar_Logo"> 
             <span class="navbar_Logo">
                 <img class="logo" src="{{asset('img/1132272.png')}}">
                 <img class="company_name" src="{{asset('img/nama.png')}}">
             </span>
         </a>
         <ul class="navbar_menu">
-            <li class="navbar_items">cart</li>
-            <li class="navbar_items"><a href="#">Name</a></li>
+            <li class="navbar_items">Log Out</li>
+            <li class="navbar_items"><a href="#">{{$user->front_name}} {{$user->last_name}}</a></li>
             <li class="pic_link navbar_items ">
                 <a class="pic_link" href="profile.html">
                     @if($user->profile_picture != NULL)

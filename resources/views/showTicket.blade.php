@@ -40,11 +40,19 @@
                     <td>{{$ticket->landingTime}}</td>
                     <td>{{$ticket->class}}</td>
                     <td>
-                        <a href="{{url('/edit/ticket/'.$ticket->id)}}">Edit</a>
+                        <!-- <a href="{{url('/edit/ticket/'.$ticket->id)}}">Edit</a>
                         <form action="{{url('delete/ticket/'.$ticket->id)}}" method="post">
                             @csrf
                             {{method_field('DELETE')}}
                             <button type="submit">Delete</button>
+                        </form> -->
+                        <form action="{{url('cart/add')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{$user->id}}">
+                            <input type="hidden" name="ticket_id" value="{{$ticket->id}}">
+                            <input type="number" name="adult_count" min="0" step="1" value="0">
+                            <input type="number" name="child_count" min="0" step="1" value="0">
+                            <button type="submit">Add to cart</button>
                         </form>
                     </td>
                 </tr>

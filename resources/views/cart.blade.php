@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar_cart">
         <span class="navbar_logo_cart">
-            <img class="logo_cart" src="{{asset/('img/1132272.png')}}">
+            <img class="logo_cart" src="{{asset('img/1132272.png')}}">
             <img class="company_name_cart" src="{{asset('img/nama.png')}}">
         </span>
         <ul class="navbar_menu">
@@ -23,7 +23,17 @@
     </nav>
     <div class="cart_body">
         <div class="cart_form">
-            
+            @foreach($cart as $item)
+                <ul>
+                    {{$item->ticket->airline}}
+                    {{$item->ticket->fromCity}} 
+                    {{$item->ticket->destinationCity}}
+                    {{$item->ticket->boardingTime}}
+                    {{$item->ticket->landingTime}}
+                    {{$item->child_count}}
+                    {{$item->adult_count}}
+                </ul>         
+            @endforeach
         </div>    
     </div>
 
