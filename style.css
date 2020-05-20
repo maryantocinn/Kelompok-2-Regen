@@ -72,6 +72,8 @@ a{
 }
 .carousel_image{
     max-height: 20rem;
+    align-self: center;
+    justify-self: center;
 }
 .numbertext {
     color: #f2f2f2;
@@ -84,10 +86,10 @@ a{
     text-align: center;
 }
 .prev{
-    left:5vw ;
+    left:7vw ;
 }
 .next {
-    right: 5vw;
+    right: 7vw;
 }
 .prev, .next {
     cursor: pointer;
@@ -108,30 +110,20 @@ a{
 .next>img{
     height: 100%;
 }
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
   .active, .dot:hover {
     background-color: #717171;
   }
-  .text {
+.carousel_caption {
     color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
+    font-size: large;
     position: absolute;
-    bottom: 8px;
-    width: 100%;
+    top: 24rem;
+    right: 46vw;
     text-align: center;
-  }
-  
-  
+  }  
+.slides{
+    display: none;
+}
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -152,27 +144,32 @@ a{
 .registration{
     height:inherit;
 }
-.arrow{
-    height: 4rem;
-    opacity: 50%;
-}
 .segmen_arrow{
     z-index: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     padding: 0 4rem;
     height:20rem;
     background-color: rgb(114, 194, 175);
 }
-
+.registration_step{
+    height:1rem;
+    width: 100%;
+    display: inline-flex;
+    position: absolute;
+    top: 25.6rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 /* FORMNYA */
 .form_cari_penerbangan{
     height: 16rem;
     width: 36rem;
     margin-left: -18rem;
     position: absolute;
-    top: 23rem;
+    top: 27rem;
     left: 50%;
     border: 1px solid;
     border-radius: 20px;
@@ -181,16 +178,7 @@ a{
     flex-direction: row;
     justify-content: center;
 }
-.registration_step{
-    height:1rem;
-    width: 100%;
-    display: inline-flex;
-    position: absolute;
-    top: 21.5rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+
 .progress_bar{
     height:.5rem;
     width: 3rem;
@@ -238,10 +226,12 @@ a{
 .left{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-left: .5rem;
 }
 .right{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    padding-left: .5rem;
 }
 .form2{
     margin-top: 1.5rem;
