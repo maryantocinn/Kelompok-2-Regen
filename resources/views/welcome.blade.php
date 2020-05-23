@@ -7,6 +7,7 @@
     <link rel="icon" href="{{asset('img/1132272.png')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <link href="{{asset('js/carousel.js')}}">
 </head>
 <body>
     <nav class="navbar">
@@ -21,7 +22,7 @@
             @auth
                 <li class="navbar_items"><a href="/account">{{$datas->front_name}} {{$datas->last_name}}</a></li>
                 @if($datas->profile_picture != NULL)
-                <img class="pic_link profile_pic_nav" src="{{url('/profile/'.$datas->profile_picture)}}">
+                <a href="/account"><img class="pic_link profile_pic_nav" src="{{url('/profile/'.$datas->profile_picture)}}"></a>
                 @endif
             @else
                 <li class="navbar_items"><a href="/login">login</a></li>
@@ -31,17 +32,27 @@
     </nav>
     <div class="content">
         <div class="registration">
-            <div class="segmen_arrow">
-                <img class="arrow arrow_left" src="{{asset('img/Arrow-Left-icon.png')}}">
-                <img class="arrow arrow_right" src="{{('img/Arrow-Right-icon.png')}}">
-                
+            <div class="carousel">
+                <div class="carousel_container">
+                    <ul class="carousel_track">
+                        <li class="carousel_slide currentSlide">
+                            <img class="carousel_image" src="{{asset('img/carousel_sample.jpg')}}" alt="picture1">
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_image" src="{{asset('img/carousel_sample1.jpg')}}" alt="picture1">
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_image" src="{{asset('img/carousel_sample2.jpg')}}" alt="picture1">
+                        </li>
+                    </ul>
+                </div>
+                <a class="carousel_button prev"><img src="{{asset('img/Arrow-Left-icon.png')}}"></a>
+                <a class="carousel_button next"><img src="{{asset('img/Arrow-Right-icon.png')}}"></a>
             </div>
-            <div class="registration_step">
-                <span class="progress_bar step1"></span>
-                <span class="progress_bar step2"></span>
-                <span class="progress_bar step3"></span>
-                <span class="progress_bar step4"></span>
-                <span class="progress_bar step5"></span>
+            <div class="carousel_nav">
+                <button class="carousel_indicator current_slide" ></button>
+                <button class="carousel_indicator"></button>
+                <button class="carousel_indicator"></button>
             </div>
             <form action="{{url('/search/ticket')}}" method="get">
                 <div class="form_cari_penerbangan">
@@ -92,4 +103,5 @@
     </footer>
 
 </body>
+<script src="{{asset('js/carousel.js')}}"></script>
 </html>

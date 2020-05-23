@@ -53,8 +53,8 @@ class HomeController extends Controller
     public function submitInfo(Request $request, User $user)
     {
         $user->update($request->all());
-        $dob = $request->bdate.'-'.$request->bmonth.'-'.$request->byear;
-        $user->update(['dob'=>$dob]);
+        // $dob = $request->bmonth.'/'.$request->bdate.'/'.$request->byear;
+        // $user->update(['dob'=>$dob]);
         return redirect('/register/ktp');
     }
 
