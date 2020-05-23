@@ -19,7 +19,7 @@
                 {{method_field('PUT')}} 
                     <input class="name" type="text" id="fname" name="front_name" placeholder="Front Name">
                     <input class="name" type="text" id="bname" name="last_name" placeholder="Last Name">
-                    <span class="birth_date">
+                    <!-- <span class="birth_date">
                         <input type="number" max="31" min="1" id="bdate" name="bdate" placeholder="Date">
                         <select id="bmonth" name="bmonth" placeholder="Month">
                             <option value="January">January</option>
@@ -36,7 +36,8 @@
                             <option value="December">December</option>
                         </select>
                         <input type="text" id="byear" name="byear" placeholder="Year">
-                    </span>
+                    </span> -->
+                    <input class="birth_date name"type="date" name="dob">
                 <input type="text" id="alamat" name="address" placeholder="Alamat">
                 <button type="submit" id="next">Next</button>
             </form>

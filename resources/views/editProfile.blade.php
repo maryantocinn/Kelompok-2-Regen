@@ -6,6 +6,7 @@
     <title>Fly Green</title>
     <link rel="icon" href="{{asset('img/1132272.png')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <nav class="navbar_profile">
@@ -43,9 +44,9 @@
             <div class="profile_form">
                 <div class="profile_col_1">
                     @if($user->profile_picture == NULL)
-                        <img class="img_disp person_register" src="{{('img/profile.gif')}}" alt="profile picture">
+                        <img class="img_disp" id="blah" src="{{('img/profile.gif')}}" alt="profile picture">
                     @else
-                    <img class="img_disp person_register" id="blah" src="{{url('/profile/'.$user->profile_picture)}}" >
+                    <img class="img_disp" id="blah" src="{{url('/profile/'.$user->profile_picture)}}" >
                     @endif
                     <label class="profile_change_pic_bt" for="imgInp">Change Picture</label>
                     <input type="file" id="imgInp" name="profile_picture" value="{{$user->profile_picture}}" style="display:none" onchange="preview(this)">
@@ -61,10 +62,10 @@
                     <div class="profile_col_3">
                         <input id="fname" class="profile_input"type="text" name="front_name" value="{{$user->front_name}}">
                         <input id="bname" class="profile_input"type="text" name="last_name" value="{{$user->last_name}}">
-                        <input id="city" class="profile_input"type="text" name="dob" value="{{$user->dob}}">
+                        <input id="city" class="profile_input"type="date" name="dob" value="{{$user->dob}}">
                         <input id="state" class="profile_input"type="text" name="address" value="{{$user->address}}">
                         <!-- <input id="st_adr" class="profile_input" type="text"> -->
-                        <a class="save_link" href="#"><button id="save" class="save_button">save</button></a>
+                        <a class="save_link" href="#"><button id="save" class="save_button">Save</button></a>
                     </div>
                 </div>
             </div>
@@ -75,7 +76,9 @@
                     <span>password:***********</span>
                     <span id="pass"></span>
                 </p>
-                <a href="/account/changepassword"><label class="chg_pass">change password</button></a>
+                <a href="/account/changepassword">
+                    <label class="chg_pass">change password</label>
+                </a>
                 
             </div>
         </div>

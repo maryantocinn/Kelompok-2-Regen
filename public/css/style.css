@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato';
 }
 a{
     text-decoration: none;
     color:black;
+}
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
 }
 /* NAV BAR */
 .navbar{
@@ -56,55 +61,166 @@ a{
     color: white;
 }
 /* Content */
+.carousel{
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    margin: 0 0;
+    background-color: rgb(114, 194, 175);
+    overflow: hidden;
+}
 .content{
     height: 40rem;
 }
+
+/* Carousel */
+.carousel-container {
+    height: 100%;
+    position: relative;
+    background-color: rgb(114, 194, 175);
+}
+.carousel_track{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+.carousel_slide{
+    position: absolute;
+    width: inherit;
+    height: 20rem;
+    margin-left: 0;
+}
+.slides{
+    max-height: 20rem;
+    /* display: none ; */
+}
+.carousel_image{
+    height: 100%;
+    width: 50vw;
+    margin: 0 24vw ;
+    object-fit: cover;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+.carousel_button{
+    position: absolute;
+    top: 100rem;
+    transform: translateY(-50%);
+    text-align: center;
+    border: 0;
+}
+.carousel_button>img{
+    position: absolute;
+    height: 100%;
+}
+.prev{
+    left:4vw;
+    height: 3rem;
+    cursor: pointer;
+    width: auto;
+    top: 10rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 7vw;
+    top: 10rem;
+    cursor: pointer;
+    /* transition: 0.6s ease; */
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    height: 3rem;
+}
+.carousel_nav{
+    position:absolute;
+    top: 26rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+.carousel_indicator{
+    border:0;
+    border-radius: 4px;
+    width: 50px;
+    height: 10px;
+    background-color: slategrey;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.current_slide{
+    background-color: lightgray;
+}
+  
+  .carousel_caption {
+    color: #f2f2f2;
+    font-size: large;
+    position: absolute;
+    top: 24rem;
+    right: 46vw;
+    text-align: center;
+  }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 /* bagian atas */
 .registration{
     height:inherit;
 }
-.arrow{
-    height: 4rem;
-    opacity: 50%;
-}
-.segmen_arrow{
+/* .segmen_arrow{
     z-index: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 4rem;
-    height:15rem;
+    height:20rem;
     background-color: rgb(114, 194, 175);
-}
-.arrow_left{
-    order: 1;
-}
-.arrow_right{
-    order: 3;
-} 
-/* FORMNYA */
-.form_cari_penerbangan{
-    height: 16rem;
-    width: 36rem;
-    margin-left: -18rem;
-    position: absolute;
-    top: 19rem;
-    left: 50%;
-    border: 1px solid;
-    border-radius: 20px;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 .registration_step{
     height:1rem;
     width: 100%;
     display: inline-flex;
     position: absolute;
-    top: 17.5rem;
+    top: 25.6rem;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+} */
+/* FORMNYA */
+.form_cari_penerbangan{
+    height: 16rem;
+    width: 36rem;
+    margin-left: -18rem;
+    position: absolute;
+    top: 27rem;
+    left: 50%;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 .progress_bar{
@@ -154,10 +270,12 @@ a{
 .left{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-left: .5rem;
 }
 .right{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    padding-left: .5rem;
 }
 .form2{
     margin-top: 1.5rem;
@@ -193,6 +311,7 @@ a{
     align-self: flex-end;
     font-weight: 500;
     color: white;
+    cursor: pointer; 
 }
 .submit_button:active{
     background-color: rgb(114, 180, 175);
@@ -548,7 +667,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 150px;
     height: 150px;
     border-radius: 10% 10%;
-    margin-right: 5rem;
+    margin-right: 5rem
 }
 .register_email_desc{
     display: flex;
@@ -824,10 +943,13 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .profile_change_pic_bt{
         margin-top: 1rem;
+        padding-top: .25rem;
         height: 2rem;
         border-radius: 20px;
         border: solid slategray 1px;
         background-color: white;
+        text-align: center;
+        cursor: pointer; 
     }
     .email_pass{
         margin: 2rem 0;
@@ -844,15 +966,18 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
         font-size: large;
         text-transform: capitalize ;
-    
+        padding-bottom: 1rem;
+        border-bottom: 1px slategray solid;
     }
     .chg_pass{
-        border-radius: 1rem;
+        border-radius: 2rem;
         width: 20rem;
         height: 2rem;
+        margin-top: 2rem;
         justify-self: center;
         align-self: flex-end;
         border: slategray 1px solid;
+        cursor: pointer; 
     }
     .profile_label{
         font-size: small;
@@ -883,9 +1008,15 @@ input[type=number]::-webkit-outer-spin-button {
         align-self: flex-end;
         justify-self: flex-end;
         border-radius: 10px;
-        border: solid aquamarine;
-        background-color: aquamarine;
+        border: rgb(114, 194, 175);
+        background-color: rgb(114, 194, 175);
         font-size: medium;
+        cursor: pointer; 
+        color: white;
+    }
+    .save_button:hover{
+        border:rgb(109, 247, 205);
+        background-color: rgb(109, 247, 205);
     }
     .logo_pass{
         height:4rem;
