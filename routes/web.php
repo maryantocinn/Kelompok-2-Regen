@@ -34,3 +34,5 @@ Route::get('/account/changepassword','HomeController@editPassword');
 Route::put('/account/submitpassword/{user}','HomeController@submitPassword');
 Route::post('/cart/add','CartController@store');
 Route::get('/cart','CartController@show')->middleware('auth');
+Route::put('/update/cart/{cart}','CartController@update');
+Route::delete('/delete/cart/{cart}','CartController@destroy');

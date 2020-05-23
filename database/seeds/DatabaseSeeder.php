@@ -87,7 +87,9 @@ class DatabaseSeeder extends Seeder
             'destinationCity' => 'Palembang',
             'boardingTime' => '09:00',
             'landingTime' => '12:00',
-            'class' => 'First'
+            'class' => 'First',
+            'childPrice' => 12345,
+            'adultPrice' => 12334
         ]);
 
         Ticket::create([
