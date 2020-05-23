@@ -56,6 +56,10 @@ a{
     font-weight: 600;
     color: white;
 }
+.navbar_items>a>button:hover{
+    cursor:pointer;
+    background-color: rgb(109, 247, 205);
+}
 /* Content */
 .content{
     height: 40rem;
