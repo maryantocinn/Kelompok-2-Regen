@@ -16,6 +16,7 @@ a{
     align-items: center;
     justify-content: space-between;
 }
+
 .logo{
     height:4rem;
 }
@@ -32,7 +33,7 @@ a{
     margin: 0 1vh;
     text-transform: capitalize;
     font-size:20px;
-    font-weight: 600;
+    font-weight: 500;
     align-self: center;
     font-family: 'Lato';
 }
@@ -747,9 +748,15 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 1rem;
 }
 
-
-
-/*Change Pass*/
+/* Profile page*/
+.navbar_profile{
+padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}   
 .navbar_pass{
     padding: 0 4rem;
     height: 8rem;
@@ -757,6 +764,128 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.profile_pic_nav{
+    height:5rem;
+    border-radius: 3rem;
+    background-color: slategray;
+}
+.pic_link{
+    height: 5rem;
+    width: 4rem;
+}
+.profile_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_form{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 25rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(227, 227, 227);
+    border-radius: 25px;
+}
+.profile_col_1{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    height: 100%;
+    justify-content: center;
+}
+.profile_col_right{
+    display: flex;
+    flex-direction: row;
+}
+.profile_col_2{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+.profile_col_3{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    justify-content: center;
+}
+.img_disp{
+    height:10rem;
+    width: 10rem;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 5rem;
+}
+.profile_change_pic_bt{
+    margin-top: 1rem;
+    height: 2rem;
+    border-radius: 20px;
+    border: solid slategray 1px;
+    background-color: white;
+}
+.email_pass{
+    margin: 2rem 0;
+    padding: 2rem;
+    width: 50vw;
+    height: 15rem;
+    background-color: rgb(227, 227, 227);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.email_pass_detail{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    text-transform: capitalize ;
+
+}
+.chg_pass{
+    border-radius: 1rem;
+    width: 20rem;
+    height: 2rem;
+    justify-self: center;
+    align-self: flex-end;
+    border: slategray 1px solid;
+}
+.profile_label{
+    font-size: small;
+    color: slategray;
+    margin: 1rem 10px 0 0;
+    height: 2rem;
+    align-self:flex-start;
+    justify-items: center;
+    padding-top: 7px;
+}
+.profile_input{
+    height: 2rem;
+    margin: 1rem 0 0 0;
+    width: 25vw;
+    border-radius: 10px;
+    border: solid lightslategray 1px;
+    padding-left:.5rem;
+}
+.save_link{
+    margin-top: 1rem;
+    height:2rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+.save_button{
+    height:2rem;
+    width: 10rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+    border-radius: 10px;
+    border: solid aquamarine;
+    background-color: aquamarine;
+    font-size: medium;
 }
 .logo_pass{
     height:4rem;
@@ -907,4 +1036,49 @@ input[type=number]::-webkit-outer-spin-button {
     color: gray;
     font-size: large;
     margin-bottom: 3rem;
+}
+/* change password page */
+.change_pass_content{
+    margin: 0 4rem 7rem 4rem;
+    padding: 2rem ;
+    width: 25em;
+    height: 20rem;
+    border-radius: 2rem;
+    background-color: rgb(227, 227, 227);
+
+}
+.change_pass_body{
+    height: 40rem;
+}
+.change_pass_content{
+    display: flex;
+    flex-direction: column;
+}
+.change_pass_txt{
+    font-size: large;
+    margin: 1rem 0 0 0 ;
+    color: slategray;
+    text-transform: capitalize;
+}
+.input_pass{
+    height: 2rem;
+    border-radius:1rem;
+    width: 13rem;
+    padding-left: 1rem;
+    border:solid slategray 1px;
+}
+.change_bt{
+    align-self: flex-end;
+}
+.change_confirm_bt{
+    height: 2rem;
+    margin-top:2rem;
+    font-size: small;
+    color: white;
+    border: 1px solid slategrey;
+    border-radius:1rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    background-color: rgb(114, 194, 175);
+    width: 9rem;
 }
