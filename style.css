@@ -1082,3 +1082,301 @@ padding: 0 4rem;
     background-color: rgb(114, 194, 175);
     width: 9rem;
 }
+
+
+
+
+
+/*User Cart*/
+.navbar_usercart{
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_usercart{
+    height:4rem;
+}
+.company_name_usercart{
+    margin-left: 5px;
+    height:2.5rem;
+    margin-bottom: .5rem;
+}
+.usercart_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.usercart_form{
+    width:65rem;
+    height:55rem ;
+    background-color: whitesmoke;
+    border: whitesmoke 4px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.ticket_form{
+    width:60rem;
+    height:10rem ;
+    background-color: white;
+    border: white 4px solid;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lato';
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.arrow_usercart_right{
+    width: 20px;
+    height: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.people_number_1{
+    width: 60px;
+    height: 60px;
+}
+.people_number_2{
+    width: 60px;
+    height: 60px;
+}
+.x_y_form{
+    display: flex;
+    justify-content: space-between;
+}
+.time_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.people_number1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.people_number2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.usercart_border{
+    margin-left: 1rem;
+}
+.plane_form{
+    margin-left: 4rem;
+}
+.ticket_price1,
+.ticket_price2{
+    color: rgb(114, 194, 175);
+}
+
+.usercart_button{    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 20%;   
+}
+.edit_cart{
+    width: 45%;
+    height: 2.2rem;
+    font-size: large;
+    text-transform: uppercase;
+    color: gray;
+    background-color: whitesmoke;
+    border:1px;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+.edit{
+    font-family: 'Lato';
+    height: 2.2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-color: whitesmoke;
+    font-size: large;
+    color: black;
+}
+.edit:hover{
+    cursor:pointer;
+    background-color: rgb(204, 197, 197);
+}
+.delete_cart{
+    width: 45%;
+    height: 2.2rem;
+    font-size: large;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(114, 194, 175);
+    border:0px;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}
+.delete{
+    font-family: 'Lato';
+    height: 2.2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(114, 194, 175);
+    font-size: large;
+    color: white;
+}
+.delete:hover{
+    cursor:pointer;
+    background-color: rgb(109, 247, 205);
+}
+.copyright_usercart{
+    font-family: 'Lato';
+    color: gray;
+    font-size: large;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/*Searching*/
+.navbar_search{
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_search{
+    height:4rem;
+}
+.company_name_search{
+    margin-left: 5px;
+    height:2.5rem;
+    margin-bottom: .5rem;
+}
+.search_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search_form{
+    width:65rem;
+    height:55rem ;
+    background-color: whitesmoke;
+    border: whitesmoke 4px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.search_ticket_form{
+    width:60rem;
+    height:10rem ;
+    background-color: white;
+    border: white 4px solid;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lato';
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.arrow_search_right{
+    width: 20px;
+    height: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.search_people_number_1{
+    width: 60px;
+    height: 60px;
+}
+.search_people_number_2{
+    width: 60px;
+    height: 60px;
+}
+.search_x_y_form{
+    display: flex;
+    justify-content: space-between;
+}
+.search_time_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.search_people_number1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_people_number2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_border{
+    margin-left: 1rem;
+}
+.search_plane_form{
+    margin-left: 4rem;
+}
+.search_ticket_price1,
+.search_ticket_price2{
+    color: rgb(114, 194, 175);
+}
+
+.search_button{    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 20%;   
+}
+.add_to_cart{
+    width: 60%;
+    height: 2.2rem;
+    font-size: large;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(114, 194, 175);
+    border:0px;
+    border-radius: 1rem;
+
+}
+.addtocart{
+    font-family: 'Lato';
+    height: 2.2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(114, 194, 175);
+    font-size: large;
+    color: white;
+}
+.addtocart:hover{
+    cursor:pointer;
+    background-color: rgb(109, 247, 205);
+}
+.copyright_usercart{
+    font-family: 'Lato';
+    color: gray;
+    font-size: large;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
