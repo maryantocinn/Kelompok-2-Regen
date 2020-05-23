@@ -28,6 +28,7 @@ a{
 .navbar_menu{
     list-style: none;
     display: inline-flex;
+    font-family: 'Lato';
 }
 .navbar_items{
     margin: 0 1vh;
