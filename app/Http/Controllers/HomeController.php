@@ -29,6 +29,7 @@ class HomeController extends Controller
     public function welcome()
     {
         $user = Auth::user();
+        $datas = NULL;
         if($user!=NULL){
             $datas = User::find($user->id);
         }

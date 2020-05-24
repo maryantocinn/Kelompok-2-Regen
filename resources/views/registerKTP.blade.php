@@ -32,7 +32,7 @@
                 {{method_field('PUT')}} 
                 <div class="confirm_button">
                     <div class="choose_button">
-                        <label class="choosefile2" for="file-upload">Choose File</label>
+                        <label class="choosefile2" for="file-upload" style="font-size:medium">Choose File</label>
                         <input type="file" id="file-upload" name="ktp" style="display:none">
                     </div>
                     <div class="done_button">
