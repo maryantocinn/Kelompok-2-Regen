@@ -39,10 +39,22 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::create($request->all());
+        
+        $cart = Cart::where([
+            ['user_id','=',$request->user_id],
+            ['ticket_id','=',$request->ticket_id],
+        ])->first();
+        if($cart==null){
+            Cart::create($request->all());
+        }
+        else{
+            $carts = Cart::find($cart->id);
+            // dd($carts);
+            $carts->child_count +=  $request->child_count;
+            $carts->adult_count +=  $request->adult_count;
+            $carts->save();
+        }
         return redirect('/cart');
-       
-       
     }
 
     /**
@@ -55,7 +67,11 @@ class CartController extends Controller
     {
         $user=Auth::user();
         $cart = User::find($user->id)->cart;
-        return view('cart',compact('cart','user'));
+        $total = 0;
+        foreach($cart as $i){
+            $total = $total + ($i->ticket->childPrice * $i->child_count) + ($i->ticket->adultPrice * $i->adult_count);
+        }
+        return view('cart',compact('cart','user','total'));
     }
 
     /**

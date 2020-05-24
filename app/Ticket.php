@@ -12,7 +12,9 @@ class Ticket extends Model
         "destinationCity",
         "boardingTime",
         "landingTime",
-        "class"
+        "class",
+        "childPrice",
+        "adultPrice"
     ];
 
     public function cart(){

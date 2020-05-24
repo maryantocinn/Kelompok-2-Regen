@@ -57,27 +57,23 @@
                         <label class="profile_label" for="bname">Back Name</label>
                         <label class="profile_label" for="city">Date of Birth</label>
                         <label class="profile_label" for="state">Address</label>
-                        <!-- <label for="st_adr" class="profile_label">Street Address</label> -->
                     </div>
                     <div class="profile_col_3">
                         <input id="fname" class="profile_input"type="text" name="front_name" value="{{$user->front_name}}">
                         <input id="bname" class="profile_input"type="text" name="last_name" value="{{$user->last_name}}">
                         <input id="city" class="profile_input"type="date" name="dob" value="{{$user->dob}}">
                         <input id="state" class="profile_input"type="text" name="address" value="{{$user->address}}">
-                        <!-- <input id="st_adr" class="profile_input" type="text"> -->
                         <a class="save_link" href="#"><button id="save" class="save_button">Save</button></a>
                     </div>
                 </div>
             </div>
             <div class="email_pass">
                 <p class="email_pass_detail">
-                    <span>email:{{$user->email}}</span>
-                    <span id="y_email"></span>
-                    <span>password:***********</span>
-                    <span id="pass"></span>
+                    <span>Email : {{$user->email}}</span>
+                    <span>Password : ***********</span>
                 </p>
                 <a href="/account/changepassword">
-                    <label class="chg_pass">change password</label>
+                    <button type="button" class="chg_pass">change password</button>
                 </a>
                 
             </div>

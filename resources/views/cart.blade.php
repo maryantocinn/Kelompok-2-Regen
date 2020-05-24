@@ -7,13 +7,12 @@
     <link rel="icon" href="{{asset('img/1132272.png')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
-    <nav class="navbar_cart">
-        <span class="navbar_logo_cart">
-            <a href="/"><img class="logo_cart" src="{{asset('img/1132272.png')}}"></a>
-            <a href="/"><img class="company_name_cart" src="{{asset('img/nama.png')}}"></a>
+    <nav class="navbar_usercart">
+        <span class="navbar_logo_usercart">
+            <a href="/"><img class="logo_usercart" src="{{asset('img/1132272.png')}}"></a>
+            <a href="/"><img class="company_name_usercart" src="{{asset('img/nama.png')}}"></a>
         </span>
         <ul class="navbar_menu">
         <li class="navbar_items">
@@ -36,25 +35,93 @@
             </li>
         </ul>
     </nav>
-    <div class="cart_body">
-        <div class="cart_form">
+    <div class="usercart_body">
+        <div class="usercart_form">
             @foreach($cart as $item)
-                <ul>
-                    {{$item->ticket->airline}}
-                    {{$item->ticket->fromCity}} 
-                    {{$item->ticket->destinationCity}}
-                    {{$item->ticket->boardingTime}}
-                    {{$item->ticket->landingTime}}
-                    {{$item->child_count}}
-                    {{$item->adult_count}}
-                </ul>         
+            <form action="{{url('update/cart/'.$item->id)}}" method="POST">
+                @csrf
+                {{method_field('PUT')}} 
+            <div class="ticket_form">
+                <div class="plane_form">
+                    <div class="plane_name">
+                        <p>{{$item->ticket->airline}}</p>
+                    </div>
+                    <div class="plane_class">
+                        <p>{{$item->ticket->class}}</p>
+                    </div>
+                </div>
+                <div class="time_form">
+                    <div class="depature_time">
+                        <p>{{$item->ticket->boardingTime}}</p>
+                    </div>
+                    <div class="usercart_border"
+                        style="width: 0px; height: 30px; border: 1.5px rgb(200, 211, 221) solid;">
+                    </div>
+                    <div class="arrival_time">
+                        <p>{{$item->ticket->landingTime}}</p>
+                    </div>
+                </div>
+                <div class="x_y_form">
+                    <div class="x">
+                        <p>{{$item->ticket->fromCity}}</p>
+                    </div>
+                    <div class="arrow_usercart">
+                        <img class="arrow_usercart_right"  src="{{asset('img/Arrow-Right-icon.png')}}">
+                    </div>
+                    <div class="y">
+                        <p>{{$item->ticket->destinationCity}}</p>
+                    </div>
+                </div>
+                <div class="price1_form">
+                    <div class="people_number1">
+                        <div class="people_number_pict1">
+                            <img class="people_number_1" src="{{asset('img/Screenshot_4.png')}}">
+                        </div>
+                        <div class="adult_passenger">
+                            <input  id="adult" class="passenger_number" type="number" name="adult_count" value="{{$item->adult_count}}" min="0" step="1" value="0">
+                        </div>
+                    </div>
+                    <div class="ticket_price1">
+                        <p>Rp {{$item->ticket->adultPrice}}</p>
+                    </div>
+                </div>
+                <div class="price2_form">
+                    <div class="people_number2">
+                        <div class="people_number_pict2">
+                            <img class="people_number_2" src="{{asset('img/Screenshot_1.png')}}">
+                        </div>
+                        <div class="kid_passenger">
+                            <input  id="kid" class="passenger_number" type="number" name="child_count" value="{{$item->child_count}}" min="0" step="1" value="0">
+                        </div>
+                    </div>
+                    <div class="ticket_price2">
+                        <p>Rp {{$item->ticket->childPrice}}</p>
+                    </div>
+                </div>
+                <div class="usercart_button">
+                        <div class="edit_cart">
+                            <button class="edit">Edit</button>
+                        </div>
+                    </form>
+                <form action="{{url('delete/cart/'.$item->id)}}" method="post">
+                @csrf
+                {{method_field('DELETE')}}
+                    <div class="delete_cart">
+                        <button class="delete">Delete</button>
+                    </div>
+                </form>      
+                </div>
+            </div>
             @endforeach
-        </div>    
+        </div>
+        <div class="usercart_total_form">
+            <div class="usercart_total">
+                <p>Price : Rp {{$total}}</p>
+            </div>
+        </div>
     </div>
-
     <footer>
-        <p class="copyright_cart">© 2009-2020 PT Global Tiket Network All Rights Reserved</p>
+        <p class="copyright_usercart">© 2009-2020 PT Global Tiket Network All Rights Reserved</p>
     </footer>
-
 </body>
 </html> 
