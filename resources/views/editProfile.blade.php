@@ -69,10 +69,10 @@
             </div>
             <div class="email_pass">
                 <p class="email_pass_detail">
-                    <span>Email : {{$user->email}}</span>
-                    <span>Password : ***********</span>
+                    <span class="email_pass_span">Email : {{$user->email}}</span>
+                    <span class="email_pass_span">Password : ***********</span>
                 </p>
-                <a href="/account/changepassword">
+                <a class="chg_pass_a" href="/account/changepassword">
                     <button type="button" class="chg_pass">change password</button>
                 </a>
                 
