@@ -39,10 +39,22 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::create($request->all());
+        
+        $cart = Cart::where([
+            ['user_id','=',$request->user_id],
+            ['ticket_id','=',$request->ticket_id],
+        ])->first();
+        if($cart==null){
+            Cart::create($request->all());
+        }
+        else{
+            $carts = Cart::find($cart->id);
+            // dd($carts);
+            $carts->child_count +=  $request->child_count;
+            $carts->adult_count +=  $request->adult_count;
+            $carts->save();
+        }
         return redirect('/cart');
-       
-       
     }
 
     /**
