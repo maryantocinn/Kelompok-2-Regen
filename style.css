@@ -1091,7 +1091,6 @@ padding: 0 4rem;
 
 
 
-
 /*User Cart*/
 .navbar_usercart{
     padding: 0 4rem;
@@ -1117,7 +1116,6 @@ padding: 0 4rem;
 }
 .usercart_form{
     width:65rem;
-    height:55rem ;
     background-color: whitesmoke;
     border: whitesmoke 4px solid;
     border-radius: 2rem;
@@ -1125,7 +1123,26 @@ padding: 0 4rem;
     flex-direction: column;
     justify-content: center;
     margin-top: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
+.usercart_total_form{
+    width:65rem;
+    height:5rem ;
+    background-color: whitesmoke;
+    border: whitesmoke 4px solid;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    font-family:  'Lato';
+    font-weight: 600;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
 .ticket_form{
     width:60rem;
     height:10rem ;
@@ -1144,8 +1161,6 @@ padding: 0 4rem;
 .arrow_usercart_right{
     width: 20px;
     height: 20px;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 .people_number_1{
     width: 60px;
@@ -1180,6 +1195,10 @@ padding: 0 4rem;
 .plane_form{
     margin-left: 4rem;
 }
+.plane_class{
+    margin-top: 1rem;
+    color:rgb(114, 194, 175);
+}
 .ticket_price1,
 .ticket_price2{
     color: rgb(114, 194, 175);
@@ -1191,6 +1210,7 @@ padding: 0 4rem;
     font-weight: 600;
     font-size: larger;
 }
+
 .usercart_button{    
     display: flex;
     flex-direction: column;
@@ -1256,6 +1276,7 @@ padding: 0 4rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
 }
+
 
 
 
