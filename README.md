@@ -17,9 +17,13 @@ php artisan serve
 ```
 5. Open the link provided in terminal
 
+(Optional)
+6. Set up mailtrap account to .env to enable reset password feature
+
+
 ## Bugs
 
-1. Change password 
+1. Some button may not display correctly
 
 ## Contributing
 Billie, Chris Jericho, Dennis, Mario, Maryanto
