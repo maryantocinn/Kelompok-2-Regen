@@ -976,12 +976,19 @@ input[type=number]::-webkit-outer-spin-button {
         padding-bottom: 1rem;
         border-bottom: 1px slategray solid;
     }
+    .email_pass_span{
+        margin-top: 0.6rem;
+    }
+    .chg_pass_a{
+        display:flex;
+        justify-content: flex-end;
+    }
     .chg_pass{
         border-radius: 2rem;
         width: 20rem;
         height: 2rem;
         margin-top: 2rem;
-        justify-self: center;
+        justify-self: flex-end;
         align-self: flex-end;
         border: slategray 1px solid;
         cursor: pointer; 
