@@ -1278,8 +1278,6 @@ padding: 0 4rem;
 }
 
 
-
-
 /*Searching*/
 .navbar_search{
     padding: 0 4rem;
@@ -1305,7 +1303,6 @@ padding: 0 4rem;
 }
 .search_form{
     width:65rem;
-    height:55rem ;
     background-color: whitesmoke;
     border: whitesmoke 4px solid;
     border-radius: 2rem;
@@ -1313,6 +1310,8 @@ padding: 0 4rem;
     flex-direction: column;
     justify-content: center;
     margin-top: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 .search_ticket_form{
     width:60rem;
@@ -1332,8 +1331,6 @@ padding: 0 4rem;
 .arrow_search_right{
     width: 20px;
     height: 20px;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 .search_people_number_1{
     width: 60px;
@@ -1368,9 +1365,20 @@ padding: 0 4rem;
 .search_plane_form{
     margin-left: 4rem;
 }
+.search_plane_class{
+    margin-top: 1rem;
+    color:rgb(114, 194, 175);
+}
 .search_ticket_price1,
 .search_ticket_price2{
     color: rgb(114, 194, 175);
+}
+.search_passenger_number{
+    width: 3rem;
+    height: 2rem;
+    border: white 0px solid;
+    font-weight: 600;
+    font-size: larger;
 }
 
 .search_button{    
