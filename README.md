@@ -4,7 +4,12 @@
 
 ## Installation
 
-1. Make a new database in PHPMyAdmin with any name
+### Tools needed:
+1. Composer
+2. Laragon / XAMPP
+
+### Steps :
+1. Make a new database using your preferred app with any name
 2. Make .env file from .env.example
 3. Change DB_DATABASE value to the name of database you've just created
 4. Open project folder in VSCODE and run these: 
@@ -23,7 +28,7 @@ php artisan serve
 
 ## Bugs
 
-1. Some button may not display correctly
+-
 
 ## Contributing
 Billie, Chris Jericho, Dennis, Mario, Maryanto
