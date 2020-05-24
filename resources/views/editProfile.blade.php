@@ -73,7 +73,7 @@
                     <span>Password : ***********</span>
                 </p>
                 <a href="/account/changepassword">
-                    <button class="chg_pass">change password</button>
+                    <button type="button" class="chg_pass">change password</button>
                 </a>
                 
             </div>

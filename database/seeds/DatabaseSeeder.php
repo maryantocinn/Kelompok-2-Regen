@@ -29,7 +29,9 @@ class DatabaseSeeder extends Seeder
             'destinationCity' => 'Palembang',
             'boardingTime' => '09:00',
             'landingTime' => '12:00',
-            'class' => 'Economy'
+            'class' => 'Economy',
+            'childPrice' => 800000,
+            'adultPrice' => 1000000
         ]);
 
         Ticket::create([
@@ -38,7 +40,9 @@ class DatabaseSeeder extends Seeder
             'destinationCity' => 'Palembang',
             'boardingTime' => '09:00',
             'landingTime' => '12:00',
-            'class' => 'Economy'
+            'class' => 'Economy',
+            'childPrice' => 700000,
+            'adultPrice' => 900000
         ]);
 
         Ticket::create([
@@ -47,7 +51,9 @@ class DatabaseSeeder extends Seeder
             'destinationCity' => 'Palembang',
             'boardingTime' => '09:00',
             'landingTime' => '12:00',
-            'class' => 'Economy'
+            'class' => 'Economy',
+            'childPrice' => 1000000,
+            'adultPrice' => 1200000
         ]);
 
         //Penerbangan jam 09.00 - 12.00 Jakarta - Palembang Business//

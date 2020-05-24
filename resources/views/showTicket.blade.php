@@ -43,8 +43,12 @@
             @csrf
             <div class="search_ticket_form">
                 <div class="search_plane_form">
-                    <p>{{$ticket->airline}}</p>
-                    <p>{{$ticket->class}}</p>
+                    <div class="search_plane_name">
+                        <p>{{$ticket->airline}}</p>
+                    </div>
+                    <div class="search_plane_class">
+                        <p>{{$ticket->class}}</p>
+                    </div>
                 </div>
                 <div class="search_time_form">
                     <div class="search_depature_time">
@@ -73,10 +77,12 @@
                         <div class="search_people_number_pict1">
                             <img class="search_people_number_1" src="{{asset('img/Screenshot_4.png')}}">
                         </div>
-                        <input type="number" name="adult_count" min="0" step="1" value="0">
+                        <div class="search_adult_passenger">
+                            <input  id="adult" class="search_passenger_number" name="adult_count" type="number" min="0" step="1" value="0">
+                        </div>
                     </div>
                     <div class="search_ticket_price1">
-                        <p>IDR 881.800</p>
+                        <p>Rp {{$ticket->adultPrice}}</p>
                     </div>
                 </div>
                 <div class="search_price2_form">
@@ -84,10 +90,12 @@
                         <div class="search_people_number_pict2">
                             <img class="search_people_number_2" src="{{asset('img/Screenshot_1.png')}}">
                         </div>
-                        <input type="number" name="child_count" min="0" step="1" value="0">
+                        <div class="search_kid_passenger">
+                            <input  id="kid" class="search_passenger_number" name="child_count" type="number" min="0" step="1" value="0">
+                        </div>
                     </div>
                     <div class="search_ticket_price2">
-                        <p>IDR 624.200</p>
+                        <p>Rp {{$ticket->adultPrice}}</p>
                     </div>
                 </div>
                 <div class="search_button">
@@ -100,11 +108,6 @@
             <input type="hidden" name="ticket_id" value="{{$ticket->id}}">
             </form>
             @endforeach
-
-
-
-            
-
         </div>
     </div>
     <footer>

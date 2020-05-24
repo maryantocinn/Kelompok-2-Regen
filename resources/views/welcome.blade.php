@@ -23,6 +23,8 @@
                 <li class="navbar_items"><a href="/account">{{$datas->front_name}} {{$datas->last_name}}</a></li>
                 @if($datas->profile_picture != NULL)
                 <a href="/account"><img class="pic_link profile_pic_nav" src="{{url('/profile/'.$datas->profile_picture)}}"></a>
+                @else
+                <a href="/account"><img class="pic_link profile_pic_nav" src="{{asset('img/profile.gif')}}" alt="profile picture"></a>
                 @endif
             @else
                 <li class="navbar_items"><a href="/login">login</a></li>
@@ -71,8 +73,8 @@
                         </select>
                         <label class="label_index" for="flight_class">Kelas Penerbangan</label>
                         <select class="select_flight" id="flight_class" name="class">
-                            <option value="Ekonomi">Ekonomi</option>
-                            <option value="Bisnis">Bisnis</option>
+                            <option value="Economy">Ekonomi</option>
+                            <option value="Business">Bisnis</option>
                             <option value="First">First</option>
                         </select>
                     </div>

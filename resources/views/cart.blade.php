@@ -43,7 +43,12 @@
                 {{method_field('PUT')}} 
             <div class="ticket_form">
                 <div class="plane_form">
-                    <p>{{$item->ticket->airline}}</p>
+                    <div class="plane_name">
+                        <p>{{$item->ticket->airline}}</p>
+                    </div>
+                    <div class="plane_class">
+                        <p>{{$item->ticket->class}}</p>
+                    </div>
                 </div>
                 <div class="time_form">
                     <div class="depature_time">
@@ -72,10 +77,12 @@
                         <div class="people_number_pict1">
                             <img class="people_number_1" src="{{asset('img/Screenshot_4.png')}}">
                         </div>
-                        <input type="number" name="adult_count" min="0" step="1" value="{{$item->adult_count}}">
+                        <div class="adult_passenger">
+                            <input  id="adult" class="passenger_number" type="number" name="adult_count" value="{{$item->adult_count}}" min="0" step="1" value="0">
+                        </div>
                     </div>
                     <div class="ticket_price1">
-                        <p>IDR 881.800</p>
+                        <p>Rp {{$item->ticket->adultPrice}}</p>
                     </div>
                 </div>
                 <div class="price2_form">
@@ -83,10 +90,12 @@
                         <div class="people_number_pict2">
                             <img class="people_number_2" src="{{asset('img/Screenshot_1.png')}}">
                         </div>
-                        <input type="number" name="child_count" min="0" step="1" value="{{$item->child_count}}">
+                        <div class="kid_passenger">
+                            <input  id="kid" class="passenger_number" type="number" name="child_count" value="{{$item->child_count}}" min="0" step="1" value="0">
+                        </div>
                     </div>
                     <div class="ticket_price2">
-                        <p>IDR 624.200</p>
+                        <p>Rp {{$item->ticket->childPrice}}</p>
                     </div>
                 </div>
                 <div class="usercart_button">
@@ -104,6 +113,11 @@
                 </div>
             </div>
             @endforeach
+        </div>
+        <div class="usercart_total_form">
+            <div class="usercart_total">
+                <p>Price : Rp {{$total}}</p>
+            </div>
         </div>
     </div>
     <footer>

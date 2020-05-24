@@ -55,7 +55,11 @@ class CartController extends Controller
     {
         $user=Auth::user();
         $cart = User::find($user->id)->cart;
-        return view('cart',compact('cart','user'));
+        $total = 0;
+        foreach($cart as $i){
+            $total = $total + ($i->ticket->childPrice * $i->child_count) + ($i->ticket->adultPrice * $i->adult_count);
+        }
+        return view('cart',compact('cart','user','total'));
     }
 
     /**

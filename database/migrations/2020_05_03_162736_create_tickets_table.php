@@ -21,6 +21,8 @@ class CreateTicketsTable extends Migration
             $table->string('boardingTime');
             $table->string('landingTime');
             $table->string('class');
+            $table->integer('childPrice')->default('1');
+            $table->integer('adultPrice')->default('2');
             $table->timestamps();
         });
     }

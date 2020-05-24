@@ -1151,7 +1151,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .usercart_form{
         width:65rem;
-        height:55rem ;
         background-color: whitesmoke;
         border: whitesmoke 4px solid;
         border-radius: 2rem;
@@ -1159,6 +1158,24 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
         justify-content: center;
         margin-top: 3rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .usercart_total_form{
+        width:65rem;
+        height:5rem ;
+        background-color: whitesmoke;
+        border: whitesmoke 4px solid;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 3rem;
+        font-family:  'Lato';
+        font-weight: 600;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     .ticket_form{
         width:60rem;
@@ -1178,8 +1195,6 @@ input[type=number]::-webkit-outer-spin-button {
     .arrow_usercart_right{
         width: 20px;
         height: 20px;
-        margin-left: 2rem;
-        margin-right: 2rem;
     }
     .people_number_1{
         width: 60px;
@@ -1214,11 +1229,21 @@ input[type=number]::-webkit-outer-spin-button {
     .plane_form{
         margin-left: 4rem;
     }
+    .plane_class{
+        margin-top: 1rem;
+        color:rgb(114, 194, 175);
+    }
     .ticket_price1,
     .ticket_price2{
         color: rgb(114, 194, 175);
     }
-    
+    .passenger_number{
+        width: 3rem;
+        height: 2rem;
+        border: white 0px solid;
+        font-weight: 600;
+        font-size: larger;
+    }
     .usercart_button{    
         display: flex;
         flex-direction: column;
@@ -1312,7 +1337,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .search_form{
         width:65rem;
-        height:55rem ;
         background-color: whitesmoke;
         border: whitesmoke 4px solid;
         border-radius: 2rem;
@@ -1320,6 +1344,8 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
         justify-content: center;
         margin-top: 3rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
     .search_ticket_form{
         width:60rem;
@@ -1339,8 +1365,6 @@ input[type=number]::-webkit-outer-spin-button {
     .arrow_search_right{
         width: 20px;
         height: 20px;
-        margin-left: 2rem;
-        margin-right: 2rem;
     }
     .search_people_number_1{
         width: 60px;
@@ -1375,11 +1399,21 @@ input[type=number]::-webkit-outer-spin-button {
     .search_plane_form{
         margin-left: 4rem;
     }
+    .search_plane_class{
+        margin-top: 1rem;
+        color:rgb(114, 194, 175);
+    }
     .search_ticket_price1,
     .search_ticket_price2{
         color: rgb(114, 194, 175);
     }
-    
+    .search_passenger_number{
+        width: 3rem;
+        height: 2rem;
+        border: white 0px solid;
+        font-weight: 600;
+        font-size: larger;
+    }
     .search_button{    
         display: flex;
         flex-direction: column;
